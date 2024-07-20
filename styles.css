@@ -1,0 +1,14 @@
+body {
+  background-color: rgb(255, 255, 255);
+  margin: 0%;
+  text-align: center;
+  display: flex;
+}
+
+#mobile-menu {
+  background-color: rgb(99, 255, 255);
+  color: black;
+  display: flex;
+  font-size: 1rem;
+
+}
