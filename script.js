@@ -10,7 +10,6 @@ function hideSidebar() {
   sidebar.style.display = 'none';
 }
 
-// Home 
 document.addEventListener("DOMContentLoaded", () => {
   const heroText = document.querySelector('.hero-text');
   const heroImage = document.querySelector('.hero-image');
@@ -39,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
   heroContent.appendChild(socialLinks);
 });
 
-// About  
 document.addEventListener("DOMContentLoaded", () => {
   const aboutMe = document.getElementById('about-me');
   if (aboutMe) {
@@ -57,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Education
 document.addEventListener("DOMContentLoaded", () => {
   const myEdu = document.getElementById('my-edu');
   if (myEdu) {
@@ -77,277 +74,169 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Projects 
 const myProjects = document.getElementById("my-projects");
-  const popUp = document.getElementById("pop-up");
-  const popupContent = document.getElementById("popup-content");
-  const closePop = document.getElementById("close-pop");
-  const mainContent = document.getElementById("main-content");
-  const body = document.body;
+const popUp = document.getElementById("pop-up");
+const popupContent = document.getElementById("popup-content");
+const closePop = document.getElementById("close-pop");
+const mainContent = document.getElementById("main-content");
+const body = document.body;
 
-  const projects = [
-    {
-      title: "Number Validator",
-      shortDescription: "The Telephone Number Validator is a web application that allows users to validate and format phone numbers based on the selected country. The application then displays the validation result and the formatted number.",
-      longDescription: "The Telephone Number Validator is an intuitive web application designed to validate and format phone numbers according to the standards of different countries. It provides a simple interface where users can enter a phone number into the input field and select the appropriate country code from a dropdown menu. By clicking the (Check) button, the application processes the input to validate its correctness and format it according to the selected country's phone number conventions.",
-      image: "images/telephone number validitor.jpg",
-      technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
-      liveLink: "https://walwalasafi.github.io/Telephone-Number-Validator/",
-      sourceLink: "https://github.com/WALWALASAFI/Telephone-Number-Validator",
-    },
-    {
-      title: "Cash Register",
-      shortDescription: "The Cash Register web application is a robust tool for managing transactions and cash flow in a retail setting. It facilitates the calculation of change and the real-time updating of the cash drawer based on the amount of cash provided by the customer.",
-      longDescription: "The Cash Register is a web application designed to calculate change and update the cash drawer based on the amount received from the customer. It features an input field for the received amount, a dropdown menu for selecting the payment method, and a button to process the transaction and display the change due. This application is designed to streamline the checkout process, ensuring accurate and efficient handling of cash transactions, reducing errors, and improving customer service.",
-      image: "images/cash register.jpg",
-      technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
-      liveLink: "https://walwalasafi.github.io/Cash-register/",
-      sourceLink: "https://github.com/WALWALASAFI/Cash-register",
-    },
-    {
-      title: "Product Landing Page",
-      shortDescription: "this is product landing page that show the online shopping also,This project is an e-commerce website dedicated to showcasing and selling traditional Afghan clothing and accessories. It features a responsive design, easy-to-use navigation, product listings, an email subscription form, and a search bar.",
-      longDescription: "this is product landing page that show the online shopping also,This project is an e-commerce website dedicated to showcasing and selling traditional Afghan clothing and accessories. It features a responsive design, easy-to-use navigation, product listings, an email subscription form, and a search bar.",
-      image: "images/landing.jpg",
-      technologies: ["HTML", "CSS", "Git", "GitHub"],
-      liveLink: "https://walwalasafi.github.io/product-landing-page/",
-      sourceLink: "https://github.com/WALWALASAFI/product-landing-page",
-    },
-    {
-      title: "Pokémon Search App",
-      shortDescription: "The Pokémon Search App is a web application designed to allow users to search for Pokémon by their name or ID. It provides detailed information and a sprite image of the searched Pokémon.",
-      longDescription: "The Pokémon Search App is a comprehensive web application that enables users to search for Pokémon by entering either the name or ID of the Pokémon they wish to find. Upon initiating the search, the app displays an array of detailed information about the Pokémon, including its name, ID, weight, height, types, and various stats. Additionally, the app shows a sprite image of the Pokémon, giving users a visual representation. The user-friendly interface, adorned with a colorful Pokémon-themed banner, enhances the overall experience, making it easy and enjoyable to look up any Pokémon.",
-      image: "images/pic of pokemon.jpg",
-      technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub", "Spilne"],
-      liveLink: "https://walwalasafi.github.io/Pok-mon-Search-App/",
-      sourceLink: "https://github.com/WALWALASAFI/Pok-mon-Search-App",
-    },
-    {
-      title: "Portfolio Project",
-      shortDescription: "This project is a portfolio website designed to showcase various web development projects. The website employs a sleek, dark-themed design with a focus on simplicity and modern aesthetics.",
-      longDescription: "This portfolio website is designed to showcase various web development projects. It features a modern, minimalist design with a dark theme, providing a sleek and professional look. The website includes a navigation bar with links to Home, About, Work, and Contact sections, allowing easy access to different parts of the site. The website is fully responsive, ensuring that it provides a seamless user experience across various devices and screen sizes.",
-      image: "images/portfolio.jpg",
-      technologies: ["HTML", "CSS", "Git", "GitHub"],
-      liveLink: "https://walwalasafi.github.io/personal-portfolio-webpage/",
-      sourceLink: "https://github.com/WALWALASAFI/personal-portfolio-webpage",
-    },
-    {
-      title: "Documentation Page",
-      shortDescription: "This is a documentation page about HTML , covering topic about HTml language and functionalaty.",
-      shortDescription: "This is a documentation page about HTML, topic about HTml language and functionalaty.",
-      image: "images/technical documention page.jpg",
-      technologies: ["HTML", "CSS", "Git", "GitHub"],
-      liveLink: "https://walwalasafi.github.io/technical_documentation_page/",
-      sourceLink: "https://github.com/WALWALASAFI/technical_documentation_page",
-    },
-    {
-      title: "Roman Number Converter",
-      shortDescription: "The Roman Number Converter is a web application that allows users to convert Arabic numbers to Roman numerals. Simply enter a number in the input field and click the (Convert) button to see the Roman numeral equivalent. ",
-      longDescription: "The Roman Number Converter is a user-friendly web application that simplifies the process of converting Arabic numbers to Roman numerals. The interface features a single input field where users can enter any Arabic number they wish to convert. By clicking the (Convert) button, the application quickly processes the input and displays the equivalent Roman numeral. The application thus not only provides a practical tool but also helps users learn about the historical numeral system.",
-      image: "images/roman numerial convertot.jpg",
-      technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
-      liveLink: "https://walwalasafi.github.io/Roman-Numeral-convertor/",
-      sourceLink: "https://github.com/WALWALASAFI/Roman-Numeral-convertor",
-    },
-    {
-      title: "Palindrome",
-      shortDescription: "This web application determines if a given text is a palindrome. It features an input field to enter text, a button to initiate the check, and a display area for the result. The design is responsive, ensuring usability across various devices.",
-      longDescription: "This web application simplifies the process of identifying palindromes by automating the comparison. When a user enters text into the input field and clicks the (Check) button, the application removes any non-alphanumeric characters and converts the text to a uniform case (usually lowercase) to ensure accurate comparison. It then reverses the cleaned text and compares it to the original cleaned version. If the two match, the text is declared a palindrome. The application’s design prioritizes user experience. Its responsive nature ensures that it functions well across various devices, while the clear and concise interface makes it accessible to users of all ages and technical backgrounds.",
-      image: "images/palindrome checker.jpg",
-      technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
-      liveLink: "https://walwalasafi.github.io/Palindrome-checker-project/",
-      sourceLink: "https://github.com/WALWALASAFI/Palindrome-checker-project",
-    },
-    {
-      title: "Survey Form",
-      shortDescription: "This web form collects user feedback to improve the freeCodeCamp platform. It asks for the user's name, email, age (optional), current role,and etc.",
-      longDescription: "This survey form is designed to collect detailed user feedback to improve the freeCodeCamp platform. With a modern and responsive design, the form ensures an optimal user experience across various devices. It includes several fields to capture comprehensive user input. The form concludes with a submit button for users to send their responses. This comprehensive survey aims to collect valuable insights from the user community to drive continuous improvement of the freeCodeCamp platform, enhancing its user-friendliness and effectiveness.",
-      image: "images/survey.jpg",
-      technologies: ["HTML", "CSS", "Git", "GitHub"],
-      liveLink: "https://walwalasafi.github.io/survey-form/",
-      sourceLink: "https://github.com/WALWALASAFI/survey-form",
-    },
-    {
-      title: "Odin Project",
-      shortDescription: "this is a odin project that contains a header and a paragraph",
-      longDescription: "this ia a Odin project that contains a header and a paraghraph related to Odin project",
-      image: "images/odin screenshot.jpg",
-      technologies: ["HTML", "CSS", "Git", "GitHub"],
-      liveLink: "https://walwalasafi.github.io/odin-project/",
-      sourceLink: "https://github.com/WALWALASAFI/odin-project",
-    },
-  ];
- 
-  if (myProjects && popUp && popupContent && closePop) {
-    myProjects.innerHTML = projects
-      .map(
-        (project, index) => `
-      <div class="proj">
-        <h3>${project.title}</h3>
-        <img src="${project.image}" alt="${project.title}" />
-        <p>${project.shortDescription}</p>
-        <button class="popup-button-more" onclick="showPopup(${index})">Learn More</button>
-      </div>`
-      )
-      .join("");
+const projects = [
+  {
+    title: "Number Validator",
+    shortDescription: "The Telephone Number Validator is a web application that allows users to validate and format phone numbers based on the selected country. The application then displays the validation result and the formatted number.",
+    longDescription: "The Telephone Number Validator is an intuitive web application designed to validate and format phone numbers according to the standards of different countries. It provides a simple interface where users can enter a phone number into the input field and select the appropriate country code from a dropdown menu. By clicking the (Check) button, the application processes the input to validate its correctness and format it according to the selected country's phone number conventions.",
+    image: "images/telephone number validitor.jpg",
+    technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
+    liveLink: "https://walwalasafi.github.io/Telephone-Number-Validator/",
+    sourceLink: "https://github.com/WALWALASAFI/Telephone-Number-Validator",
+  },
+  {
+    title: "Cash Register",
+    shortDescription: "The Cash Register web application is a robust tool for managing transactions and cash flow in a retail setting. It facilitates the calculation of change and the real-time updating of the cash drawer based on the amount of cash provided by the customer.",
+    longDescription: "The Cash Register is a web application designed to calculate change and update the cash drawer based on the amount received from the customer. It features an input field for the received amount, a dropdown menu for selecting the payment method, and a button to process the transaction and display the change due. This application is designed to streamline the checkout process, ensuring accurate and efficient handling of cash transactions, reducing errors, and improving customer service.",
+    image: "images/cash register.jpg",
+    technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
+    liveLink: "https://walwalasafi.github.io/Cash-register/",
+    sourceLink: "https://github.com/WALWALASAFI/Cash-register",
+  },
+  {
+    title: "Product Landing Page",
+    shortDescription: "This is a product landing page that showcases online shopping. This project is an e-commerce website dedicated to showcasing and selling traditional Afghan clothing and accessories. It features a responsive design, easy-to-use navigation, product listings, an email subscription form, and a search bar.",
+    longDescription: "This project is an e-commerce website dedicated to showcasing and selling traditional Afghan clothing and accessories. It features a responsive design, easy-to-use navigation, product listings, an email subscription form, and a search bar.",
+    image: "images/landing.jpg",
+    technologies: ["HTML", "CSS", "Git", "GitHub"],
+    liveLink: "https://walwalasafi.github.io/product-landing-page/",
+    sourceLink: "https://github.com/WALWALASAFI/product-landing-page",
+  },
+  {
+    title: "Pokémon Search App",
+    shortDescription: "The Pokémon Search App is a web application designed to allow users to search for Pokémon by their name or ID. It provides detailed information and a sprite image of the searched Pokémon.",
+    longDescription: "The Pokémon Search App is a comprehensive web application that enables users to search for Pokémon by entering either the name or ID of the Pokémon they wish to find. Upon initiating the search, the app displays an array of detailed information about the Pokémon, including its name, ID, weight, height, types, and various stats. Additionally, the app shows a sprite image of the Pokémon, giving users a visual representation. The user-friendly interface, adorned with a colorful Pokémon-themed banner, enhances the overall experience, making it easy and enjoyable to look up any Pokémon.",
+    image: "images/pic of pokemon.jpg",
+    technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub", "Spilne"],
+    liveLink: "https://walwalasafi.github.io/Pok-mon-Search-App/",
+    sourceLink: "https://github.com/WALWALASAFI/Pok-mon-Search-App",
+  },
+  {
+    title: "Portfolio Project",
+    shortDescription: "This project is a portfolio website designed to showcase various web development projects. The website employs a sleek, dark-themed design with a focus on simplicity and modern aesthetics.",
+    longDescription: "This portfolio website is designed to showcase various web development projects. It features a modern, minimalist design with a dark theme, providing a sleek and professional look. The website includes a navigation bar with links to Home, About, Work, and Contact sections, allowing easy access to different parts of the site. The website is fully responsive, ensuring that it provides a seamless user experience across various devices and screen sizes.",
+    image: "images/portfolio.jpg",
+    technologies: ["HTML", "CSS", "Git", "GitHub"],
+    liveLink: "https://walwalasafi.github.io/personal-portfolio-webpage/",
+    sourceLink: "https://github.com/WALWALASAFI/personal-portfolio-webpage",
+  },
+  {
+    title: "Documentation Page",
+    shortDescription: "This is a documentation page about HTML, covering topics about the HTML language and functionality.",
+    longDescription: "This is a documentation page about HTML, covering topics about the HTML language and functionality.",
+    image: "images/technical documention page.jpg",
+    technologies: ["HTML", "CSS", "Git", "GitHub"],
+    liveLink: "https://walwalasafi.github.io/technical_documentation_page/",
+    sourceLink: "https://github.com/WALWALASAFI/technical_documentation_page",
+  },
+  {
+    title: "Roman Number Converter",
+    shortDescription: "The Roman Number Converter is a web application that allows users to convert Arabic numbers to Roman numerals. It provides an intuitive interface where users can enter a number and receive its Roman numeral equivalent.",
+    longDescription: "The Roman Number Converter is a web application designed to convert Arabic numbers into Roman numerals. The application provides a user-friendly interface where users can enter any Arabic number within the accepted range and immediately receive its Roman numeral equivalent. This tool is useful for educational purposes, historical research, or any situation requiring the conversion of numerical data into Roman numerals. With its straightforward design and efficient functionality, the Roman Number Converter offers a seamless user experience, ensuring accurate and reliable results with every use.",
+    image: "images/roman number convertor.jpg",
+    technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
+    liveLink: "https://walwalasafi.github.io/Roman-Number-Converter/",
+    sourceLink: "https://github.com/WALWALASAFI/Roman-Number-Converter",
+  },
+];
 
-    window.showPopup = function (index) {
-      const project = projects[index];
-      popupContent.innerHTML = `
-        <button id="close-pop" class="close-btn">&times;</button>
-        <h3>${project.title}</h3>
-        <img src="${project.image}" alt="${project.title}" />
-        <p>${project.longDescription}</p>
-        <p>Technologies: ${project.technologies.join(", ")}</p>
-        <a class="popup-button" id="live" href="${project.liveLink}" target="_blank">Live Site</a>
-        <a class="popup-button" id="git" href="${project.sourceLink}" target="_blank">GitHub Repository</a>
-      `;
-      popUp.classList.remove("hidden");
-      mainContent.classList.add("blurred");
-      body.classList.add("no-scroll");
+projects.forEach((project, index) => {
+  const projectElement = document.createElement("div");
+  projectElement.classList.add("project-card");
 
-      document.getElementById("close-pop").addEventListener("click", () => {
-        popUp.classList.add("hidden");
-        mainContent.classList.remove("blurred");
-        body.classList.remove("no-scroll");
-      });
-    }
-  }
-
-//Certification 
-const aboutMe = document.getElementById("certification");
-
-const skills = {
-  certificates: [
-    { name: "Responsive Web Design", image: "certificate/responsive certificate.jpg", link: "#" },
-    { name: "JavaScript", image: "certificate/java script certificate.jpg", link: "#" },
-  ],
-};
-
-certification.innerHTML = `
-  <div id="certification-section">
-    <h2>Certificates</h2>
-    <div class="cert-list">
-      ${skills.certificates
-        .map(
-          (certificate) => `
-        <div class="cert">
-          <h3>${certificate.name}</h3>
-            <img src="${certificate.image}" alt="${certificate.name}"/>
-        </div>`
-        )
-        .join("")}
+  projectElement.innerHTML = `
+    <div class="project-image">
+      <img src="${project.image}" alt="${project.title}">
     </div>
-  </div>
-`;
+    <div class="project-content">
+      <h2>${project.title}</h2>
+      <p>${project.shortDescription}</p>
+      <button class="project-btn" onclick="showProject(${index})">Read More</button>
+    </div>
+  `;
 
+  myProjects.appendChild(projectElement);
+});
 
-//Skills 
-document.addEventListener("DOMContentLoaded", () => {
-  const skills = {
-    languages: ["HTML", "CSS", "JS", "Java", "WordPress", "Bootstrap"],
-    professionalSkills: ["Team Work", "Multi Task", "Critical thinking", "Communication", "Time management", "Creativity"],
-    softSkills: ["Ideas", "Teamwork", "Clean Code", "Code Review"]
-  };
+function showProject(index) {
+  const project = projects[index];
+  popUp.style.display = "flex";
+  body.style.overflow = "hidden";
 
-  const skillsContainer = document.getElementById('skills');
-
-  if (skillsContainer) {
-    skillsContainer.innerHTML = `
-      <h2>Skills</h2>
-      <div id="skills-content">
-        <div class="list">
-          <div class="skills-category">
-            <h3 class="skills-header" data-target="#languages-list">Languages</h3>
-            <ul class="skills-list" id="languages-list"></ul>
-          </div>
-          <div class="skills-category">
-            <h3 class="skills-header" data-target="#professional-skills-list">Professional Skills</h3>
-            <ul class="skills-list" id="professional-skills-list"></ul>
-          </div>
-          <div class="skills-category">
-            <h3 class="skills-header" data-target="#soft-skills-list">Soft Skills</h3>
-            <ul class="skills-list" id="soft-skills-list"></ul>
-          </div>
-        </div>
-        <div class="image">
-          <div id="skills-image">
-            <img src="images/download.jpg">
-          </div>
-        </div>
+  popupContent.innerHTML = `
+    <div class="pop-up-image">
+      <img src="${project.image}" alt="${project.title}">
+    </div>
+    <div class="pop-up-content">
+      <h2>${project.title}</h2>
+      <p>${project.longDescription}</p>
+      <div class="technologies">
+        <h3>Technologies used:</h3>
+        <ul>
+          ${project.technologies.map(tech => `<li>${tech}</li>`).join("")}
+        </ul>
       </div>
-    `;
+      <div class="pop-up-links">
+        <a href="${project.liveLink}" target="_blank">Live Demo</a>
+        <a href="${project.sourceLink}" target="_blank">Source Code</a>
+      </div>
+      <button id="close-pop" onclick="closePopup()">Close</button>
+    </div>
+  `;
+}
 
-    // Append list items 
-    const languagesList = document.getElementById('languages-list');
-    const professionalSkillsList = document.getElementById('professional-skills-list');
-    const softSkillsList = document.getElementById('soft-skills-list');
+function closePopup() {
+  popUp.style.display = "none";
+  body.style.overflow = "auto";
+}
 
-    skills.languages.forEach(language => {
-      const listItem = document.createElement('li');
-      listItem.textContent = language;
-      languagesList.appendChild(listItem);
+// Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
     });
-
-    skills.professionalSkills.forEach(skill => {
-      const listItem = document.createElement('li');
-      listItem.textContent = skill;
-      professionalSkillsList.appendChild(listItem);
-    });
-
-    skills.softSkills.forEach(skill => {
-      const listItem = document.createElement('li');
-      listItem.textContent = skill;
-      softSkillsList.appendChild(listItem);
-    });
-
-    // Add click event to toggle visibility of lists
-    document.querySelectorAll('.skills-header').forEach(header => {
-      header.addEventListener('click', () => {
-        const targetList = document.querySelector(header.dataset.target);
-        
-        if (targetList.classList.contains('visible')) {
-          // If the clicked list is already visible, close it
-          targetList.classList.remove('visible');
-        } else {
-          // Close any currently open lists
-          document.querySelectorAll('.skills-list.visible').forEach(list => {
-            list.classList.remove('visible');
-          });
-          // Open the clicked list
-          targetList.classList.add('visible');
-        }
-      });
-    });
-  }
+  });
 });
 
+// Show and hide sidebar
+function showSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.display = 'flex';
+}
 
-// Contact 
-document.addEventListener("DOMContentLoaded", () => {
-  const contactForm = document.getElementById("contact-form");
-  const errorMessage = document.getElementById("error-message");
+function hideSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.display = 'none';
+}
 
-  if (contactForm && errorMessage) {
-    contactForm.addEventListener("submit", (event) => {
-      const email = document.getElementById("email").value;
-      if (email !== email.toLowerCase()) {
-        event.preventDefault();
-        errorMessage.classList.remove("hidden");
-      } else {
-        errorMessage.classList.add("hidden");
-      }
-    });
+// Form submission
+const contactForm = document.getElementById("contact-form");
 
-    const formFields = ["name", "email", "message"];
-    formFields.forEach((field) => {
-      const input = document.getElementById(field);
-      if (input) {
-        input.value = localStorage.getItem(field) || "";
-        input.addEventListener("input", () => {
-          localStorage.setItem(field, input.value);
-        });
-      }
-    });
-  }
-});
+if (contactForm) {
+  contactForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    const formData = new FormData(contactForm);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
+
+    // Here you can handle form submission, like sending the data to a backend server
+    // For demonstration purposes, let's log the form data to console
+    console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+    alert("Thank you! Your message has been sent.");
+
+    // Optionally, clear the form
+    contactForm.reset();
+  });
+}
+
