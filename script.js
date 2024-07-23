@@ -10,7 +10,7 @@ function hideSidebar() {
   sidebar.style.display = 'none';
 }
 
-// Home page content initialization
+// Home 
 document.addEventListener("DOMContentLoaded", () => {
   const heroText = document.querySelector('.hero-text');
   const heroImage = document.querySelector('.hero-image');
@@ -22,43 +22,42 @@ document.addEventListener("DOMContentLoaded", () => {
       <h2>Walwala Safi</h2>
       <h1>Web Developer</h1>
       <a href="#contact" class="contact-btn">Contact Me</a>
-      
   `;
 
   heroImage.innerHTML = `
-      
+     <img src="images/page.jpg" alt="Hero Image"> 
   `;
 
   const socialLinks = document.createElement('div');
   socialLinks.className = 'social-links';
   socialLinks.innerHTML = `
       <a href="https://github.com/WALWALASAFI/"><i class="fab fa-github"></i></a>
-      <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-      <a href="https://www.linkedin.com/in/walwala-safi-65b56530a/"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.linkedin.com/in/walwala-safi-65b56530a/"><i class="fab fa-linkedin"></i></a>
   `;
 
   heroContent.appendChild(socialLinks);
 });
 
-// About page content initialization
+// About  
 document.addEventListener("DOMContentLoaded", () => {
   const aboutMe = document.getElementById('about-me');
   if (aboutMe) {
     aboutMe.innerHTML = `
       <div class="about-section">
         <div class="about-image">
-          <img src="images/image of about.jpg">
+          <img src="images/image of about.jpg" alt="About Image">
         </div>
         <div class="about-text">
           <h2>About me</h2>
-          <p>I'm Walwala Safi, a passionate web developer with a knack for crafting digital experiences that blend creativity with functionality. With a keen eye for design and a love for clean code, I specialize in creating responsive and intuitive websites that not only look great but also perform flawlessly across all devices.Beyond coding, I enjoy exploring the intersections of design and technology, constantly seeking inspiration from diverse sources to bring fresh perspectives to my work.</p>
+          <p>I'm Walwala Safi, a passionate web developer with a knack for crafting digital experiences that blend creativity with functionality. With a keen eye for design and a love for clean code, I specialize in creating responsive and intuitive websites that not only look great but also perform flawlessly across all devices. Beyond coding, I enjoy exploring the intersections of design and technology, constantly seeking inspiration from diverse sources to bring fresh perspectives to my work.</p>
         </div>
       </div>
     `;
   }
 });
 
-//Education
+// Education
 document.addEventListener("DOMContentLoaded", () => {
   const myEdu = document.getElementById('my-edu');
   if (myEdu) {
@@ -66,25 +65,26 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="edu-section">
         <div class="edu-text">
           <h2>Education</h2>
-          <p>i am a student of Computer sciance, in Salam University. Beside of this, i am graduated from Tajvar Sultana High school with high honors, excelling mark. Also, i have taken my English language Diploma at Salam university. My educational journey in computer science at Salam University has equipped me with a  completely understanding of  web technologies and development. Through rigorous coursework and hands-on projects, I've gained proficiency in:
+          <p>I am a student of Computer Science at Salam University. Besides this, I graduated from Tajvar Sultana High School with high honors, excelling marks. Also, I have earned my English Language Diploma at Salam University. My educational journey in computer science at Salam University has equipped me with a deep understanding of web technologies and development. Through rigorous coursework and hands-on projects, I've gained proficiency in:
           HTML, CSS, and JavaScript: Mastering the building blocks of web pages to create visually appealing and functional interfaces.</p>
         </div>
         <div class="edu-image">
-          <img src="images/download.jpg" alt="Education Image">
-          <a href="CV/w resume.pdf"</a>
+          <img src="images/page.jpg" alt="Education Image">
+          <a href="CV/w resume.pdf" download="CV/w resume.pdf" class="edu-button">Download CV</a>
         </div>
       </div>
     `;
   }
 });
 
-// Projects section content initialization
+// Projects 
 const myProjects = document.getElementById("my-projects");
-const popUp = document.getElementById("pop-up");
-const popupContent = document.getElementById("popup-content");
-const closePop = document.getElementById("close-pop");
+  const popUp = document.getElementById("pop-up");
+  const popupContent = document.getElementById("popup-content");
+  const closePop = document.getElementById("close-pop");
+  const mainContent = document.getElementById("main-content");
+  const body = document.body;
 
-if (myProjects && popUp && popupContent && closePop) {
   const projects = [
     {
       title: "Number Validator",
@@ -177,71 +177,153 @@ if (myProjects && popUp && popupContent && closePop) {
       sourceLink: "https://github.com/WALWALASAFI/odin-project",
     },
   ];
+ 
+  if (myProjects && popUp && popupContent && closePop) {
+    myProjects.innerHTML = projects
+      .map(
+        (project, index) => `
+      <div class="proj">
+        <h3>${project.title}</h3>
+        <img src="${project.image}" alt="${project.title}" />
+        <p>${project.shortDescription}</p>
+        <button class="popup-button-more" onclick="showPopup(${index})">Learn More</button>
+      </div>`
+      )
+      .join("");
 
-  myProjects.innerHTML = projects
-    .map(
-      (project, index) => `
-    <div class="proj">
-      <h3>${project.title}</h3>
-      <img src="${project.image}" alt="${project.title}" />
-      <p>${project.shortDescription}</p>
-      <button onclick="showPopup(${index})">Learn More</button>
-    </div>`
-    )
-    .join("");
+    window.showPopup = function (index) {
+      const project = projects[index];
+      popupContent.innerHTML = `
+        <button id="close-pop" class="close-btn">&times;</button>
+        <h3>${project.title}</h3>
+        <img src="${project.image}" alt="${project.title}" />
+        <p>${project.longDescription}</p>
+        <p>Technologies: ${project.technologies.join(", ")}</p>
+        <a class="popup-button" id="live" href="${project.liveLink}" target="_blank">Live Site</a>
+        <a class="popup-button" id="git" href="${project.sourceLink}" target="_blank">GitHub Repository</a>
+      `;
+      popUp.classList.remove("hidden");
+      mainContent.classList.add("blurred");
+      body.classList.add("no-scroll");
 
-  // Function to show project popup
-  function showPopup(index) {
-    const project = projects[index];
-    popupContent.innerHTML = `
-      <h3>${project.title}</h3>
-      <p>${project.longDescription}</p>
-      <p>Technologies: ${project.technologies.join(", ")}</p>
-      <a href="${project.liveLink}" target="_blank">Live Demo</a>
-      <a href="${project.sourceLink}" target="_blank">Source Link</a>
-    `;
-    popUp.classList.remove("hidden");
+      document.getElementById("close-pop").addEventListener("click", () => {
+        popUp.classList.add("hidden");
+        mainContent.classList.remove("blurred");
+        body.classList.remove("no-scroll");
+      });
+    }
   }
 
-  // Event listener to close popup
-  closePop.addEventListener("click", () => {
-    popUp.classList.add("hidden");
-  });
+//Certification 
+const aboutMe = document.getElementById("certification");
 
-  // Attach showPopup function to global scope
-  window.showPopup = showPopup;
-}
+const skills = {
+  certificates: [
+    { name: "Responsive Web Design", image: "certificate/responsive certificate.jpg", link: "#" },
+    { name: "JavaScript", image: "certificate/java script certificate.jpg", link: "#" },
+  ],
+};
+
+certification.innerHTML = `
+  <div id="certification-section">
+    <h2>Certificates</h2>
+    <div class="cert-list">
+      ${skills.certificates
+        .map(
+          (certificate) => `
+        <div class="cert">
+          <h3>${certificate.name}</h3>
+            <img src="${certificate.image}" alt="${certificate.name}"/>
+        </div>`
+        )
+        .join("")}
+    </div>
+  </div>
+`;
 
 
-// Skills section content initialization
+//Skills 
 document.addEventListener("DOMContentLoaded", () => {
-  const skillsSection = document.getElementById('skills');
-  if (skillsSection) {
-    const skills = {
-      languages: ["HTML", "CSS", "java", "js",],
-      tools: ["Git", "GitHub", "Vscode",]
-    };
+  const skills = {
+    languages: ["HTML", "CSS", "JS", "Java", "WordPress", "Bootstrap"],
+    professionalSkills: ["Team Work", "Multi Task", "Critical thinking", "Communication", "Time management", "Creativity"],
+    softSkills: ["Ideas", "Teamwork", "Clean Code", "Code Review"]
+  };
 
-    const skillsList = document.createElement('ul');
-    skillsList.className = 'skills-list';
+  const skillsContainer = document.getElementById('skills');
+
+  if (skillsContainer) {
+    skillsContainer.innerHTML = `
+      <h2>Skills</h2>
+      <div id="skills-content">
+        <div class="list">
+          <div class="skills-category">
+            <h3 class="skills-header" data-target="#languages-list">Languages</h3>
+            <ul class="skills-list" id="languages-list"></ul>
+          </div>
+          <div class="skills-category">
+            <h3 class="skills-header" data-target="#professional-skills-list">Professional Skills</h3>
+            <ul class="skills-list" id="professional-skills-list"></ul>
+          </div>
+          <div class="skills-category">
+            <h3 class="skills-header" data-target="#soft-skills-list">Soft Skills</h3>
+            <ul class="skills-list" id="soft-skills-list"></ul>
+          </div>
+        </div>
+        <div class="image">
+          <div id="skills-image">
+            <img src="images/download.jpg">
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Append list items 
+    const languagesList = document.getElementById('languages-list');
+    const professionalSkillsList = document.getElementById('professional-skills-list');
+    const softSkillsList = document.getElementById('soft-skills-list');
 
     skills.languages.forEach(language => {
       const listItem = document.createElement('li');
       listItem.textContent = language;
-      skillsList.appendChild(listItem);
+      languagesList.appendChild(listItem);
     });
 
-    skills.tools.forEach(tool => {
+    skills.professionalSkills.forEach(skill => {
       const listItem = document.createElement('li');
-      listItem.textContent = tool;
-      skillsList.appendChild(listItem);
+      listItem.textContent = skill;
+      professionalSkillsList.appendChild(listItem);
     });
 
-    skillsSection.appendChild(skillsList);
+    skills.softSkills.forEach(skill => {
+      const listItem = document.createElement('li');
+      listItem.textContent = skill;
+      softSkillsList.appendChild(listItem);
+    });
+
+    // Add click event to toggle visibility of lists
+    document.querySelectorAll('.skills-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const targetList = document.querySelector(header.dataset.target);
+        
+        if (targetList.classList.contains('visible')) {
+          // If the clicked list is already visible, close it
+          targetList.classList.remove('visible');
+        } else {
+          // Close any currently open lists
+          document.querySelectorAll('.skills-list.visible').forEach(list => {
+            list.classList.remove('visible');
+          });
+          // Open the clicked list
+          targetList.classList.add('visible');
+        }
+      });
+    });
   }
 });
 
-// Contact form handling
+
+// Contact 
 document.addEventListener("DOMContentLoaded", () => {
   const contactForm = document.getElementById("contact-form");
   const errorMessage = document.getElementById("error-message");
