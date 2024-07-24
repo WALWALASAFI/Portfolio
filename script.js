@@ -23,10 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
       <a href="#contact" class="contact-btn">Contact Me</a>
   `;
 
-  heroImage.innerHTML = `
-     <img src="images/page.jpg" alt="Hero Image"> 
-  `;
-
   const socialLinks = document.createElement('div');
   socialLinks.className = 'social-links';
   socialLinks.innerHTML = `
@@ -66,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
           HTML, CSS, and JavaScript: Mastering the building blocks of web pages to create visually appealing and functional interfaces.</p>
         </div>
         <div class="edu-image">
-          <img src="images/page.jpg" alt="Education Image">
+          <img src="images/8bcfe4f3-b5c8-485d-ae20-01bff4da89c1.jpg">
           <a href="CV/w resume.pdf" download="CV/w resume.pdf" class="edu-button">Download CV</a>
         </div>
       </div>
@@ -140,19 +136,19 @@ const projects = [
       title: "Palindrome",
       shortDescription: "This web application determines if a given text is a palindrome. It features an input field to enter text, a button to initiate the check, and a display area for the result. The design is responsive, ensuring usability across various devices.",
       longDescription: "This web application simplifies the process of identifying palindromes by automating the comparison. When a user enters text into the input field and clicks the (Check) button, the application removes any non-alphanumeric characters and converts the text to a uniform case (usually lowercase) to ensure accurate comparison. It then reverses the cleaned text and compares it to the original cleaned version. If the two match, the text is declared a palindrome. The application’s design prioritizes user experience. Its responsive nature ensures that it functions well across various devices, while the clear and concise interface makes it accessible to users of all ages and technical backgrounds.",
-      image: "images/Palindrome.png",
+      image: "images/palindrome checker.jpg",
       technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
-      liveLink: "https://zohalmirkhel.github.io/palindrome/",
-      sourceLink: " https://github.com/ZohalMirkhel/palindrome",
+      liveLink: "",
+      sourceLink: "",
     },
     {
       title: "Survey Form",
       shortDescription: "This web form collects user feedback to improve the freeCodeCamp platform. It asks for the user's name, email, age (optional), current role, recommendation likelihood, favorite features, improvement suggestions, and additional comments. Users are prompted to submit the form after completion.",
       longDescription: "This survey form is designed to collect detailed user feedback to improve the freeCodeCamp platform. With a modern and responsive design, the form ensures an optimal user experience across various devices. It includes several fields to capture comprehensive user input. The form concludes with a submit button for users to send their responses. This comprehensive survey aims to collect valuable insights from the user community to drive continuous improvement of the freeCodeCamp platform, enhancing its user-friendliness and effectiveness.",
-      image: "images/sf.png",
+      image: "images/survey.jpg",
       technologies: ["HTML", "CSS", "Git", "GitHub"],
-      liveLink: "https://github.com/ZohalMirkhel/survey-form",
-      sourceLink: "https://github.com/ZohalMirkhel/survey-form",
+      liveLink: "",
+      sourceLink: "",
     },
   {
     title: "Roman Number Converter",
@@ -237,111 +233,3 @@ certification.innerHTML = `
     </div>
   </div>
 `;
-
-istener("DOMContentLoaded", () => {
-  const skills = {
-    languages: ["HTML", "CSS", "JS", "Java", "WordPress", "Bootstrap"],
-    professionalSkills: ["Team Work", "Multi Task", "Critical thinking", "Communication", "Time management", "Creativity"],
-    softSkills: ["Ideas", "Teamwork", "Clean Code", "Code Review"]
-  };
-
-  const skillsContainer = document.getElementById('skills');
-
-  if (skillsContainer) {
-    skillsContainer.innerHTML = `
-      <h2>Skills</h2>
-      <div id="skills-content">
-        <div class="list">
-          <div class="skills-category">
-            <h3 class="skills-header" data-target="#languages-list">Languages</h3>
-            <ul class="skills-list" id="languages-list"></ul>
-          </div>
-          <div class="skills-category">
-            <h3 class="skills-header" data-target="#professional-skills-list">Professional Skills</h3>
-            <ul class="skills-list" id="professional-skills-list"></ul>
-          </div>
-          <div class="skills-category">
-            <h3 class="skills-header" data-target="#soft-skills-list">Soft Skills</h3>
-            <ul class="skills-list" id="soft-skills-list"></ul>
-          </div>
-        </div>
-        <div class="image">
-          <div id="skills-image">
-            <img src="images/skills.png" alt="Skills Image">
-          </div>
-        </div>
-      </div>
-    `;
-
-    // Append list items to respective lists
-    const languagesList = document.getElementById('languages-list');
-    const professionalSkillsList = document.getElementById('professional-skills-list');
-    const softSkillsList = document.getElementById('soft-skills-list');
-
-    skills.languages.forEach(language => {
-      const listItem = document.createElement('li');
-      listItem.textContent = language;
-      languagesList.appendChild(listItem);
-    });
-
-    skills.professionalSkills.forEach(skill => {
-      const listItem = document.createElement('li');
-      listItem.textContent = skill;
-      professionalSkillsList.appendChild(listItem);
-    });
-
-    skills.softSkills.forEach(skill => {
-      const listItem = document.createElement('li');
-      listItem.textContent = skill;
-      softSkillsList.appendChild(listItem);
-    });
-
-    // Add click event to toggle visibility of lists
-    document.querySelectorAll('.skills-header').forEach(header => {
-      header.addEventListener('click', () => {
-        const targetList = document.querySelector(header.dataset.target);
-
-        if (targetList.classList.contains('visible')) {
-          // If the clicked list is already visible, close it
-          targetList.classList.remove('visible');
-        } else {
-          // Close any currently open lists
-          document.querySelectorAll('.skills-list.visible').forEach(list => {
-            list.classList.remove('visible');
-          });
-          // Open the clicked list
-          targetList.classList.add('visible');
-        }
-      });
-    });
-  }
-});
-
-// Contact form handling
-document.addEventListener("DOMContentLoaded", () => {
-  const contactForm = document.getElementById("contact-form");
-  const errorMessage = document.getElementById("error-message");
-
-  if (contactForm && errorMessage) {
-    contactForm.addEventListener("submit", (event) => {
-      const email = document.getElementById("email").value;
-      if (email !== email.toLowerCase()) {
-        event.preventDefault();
-        errorMessage.classList.remove("hidden");
-      } else {
-        errorMessage.classList.add("hidden");
-      }
-    });
-
-    const formFields = ["name", "email", "message"];
-    formFields.forEach((field) => {
-      const input = document.getElementById(field);
-      if (input) {
-        input.value = localStorage.getItem(field) || "";
-        input.addEventListener("input", () => {
-          localStorage.setItem(field, input.value);
-        });
-      }
-    });
-  }
-});

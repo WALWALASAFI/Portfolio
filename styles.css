@@ -1,6 +1,6 @@
 body {
   min-height: 100vh;
-  background-color: rgb(16, 14, 14);
+  background-color: black;
   font-family: Arial, sans-serif;
 }
 
@@ -138,19 +138,6 @@ body {
   position: relative;
 }
 
-.hero-image {
-  top: 2rem;
-  max-width: 50%;
-  text-align: center;
-}
-
-.hero-image img {
-  max-width: 70%;
-  border-radius: 50px;
-  margin-left: 60%;
-  margin-top: 25%;
-}
-
 .social-links {
   display: flex;
   flex-direction: column;
@@ -170,7 +157,6 @@ body {
   height: 30px;
 }
 
-/* About Me */
 .about-content {
   display: flex;
   justify-content: center;
@@ -183,7 +169,8 @@ body {
 .about-image img {
   width: 50%;
   float: left; 
-  margin-top: 30px;
+  margin-top: 60px;
+  border-radius: 20%;
 }
 
 #about-me {
@@ -199,6 +186,7 @@ body {
   display: inline-block;
   padding: 5px 40px;
   padding-left: 60px;
+  margin-top: 8%;
 }
 
 #about-me p {
@@ -208,7 +196,6 @@ body {
   text-align: left;
 }
 
-/* Education */
 #education {
   display: flex;
   justify-content: center;
@@ -258,7 +245,7 @@ body {
 
 #my-edu p {
   color: #ccc;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .edu-button {
@@ -281,7 +268,6 @@ body {
   background-color: #94c5f6;
 }
 
-/* Projects Part */
 #project {
   padding: 35px;
   text-align: center;
@@ -323,7 +309,7 @@ body {
 
 .proj:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(232, 229, 229, 0.2);
 }
 
 .proj img {
@@ -366,7 +352,6 @@ body {
   background-color: #1e5a97;
 }
 
-/* Basic styling for the popup */
 .hidden {
   display: none;
 }
@@ -425,7 +410,7 @@ body {
   display: inline-block;
   padding: 10px 20px;
   margin: 40px 60px;
-  background: #000;
+  background: #ffffff;
   font-family: 'Sansita One';
   color: #1e5a97;
   text-decoration: none;
