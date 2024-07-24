@@ -136,107 +136,212 @@ const projects = [
     liveLink: "https://walwalasafi.github.io/technical_documentation_page/",
     sourceLink: "https://github.com/WALWALASAFI/technical_documentation_page",
   },
+  {   
+      title: "Palindrome",
+      shortDescription: "This web application determines if a given text is a palindrome. It features an input field to enter text, a button to initiate the check, and a display area for the result. The design is responsive, ensuring usability across various devices.",
+      longDescription: "This web application simplifies the process of identifying palindromes by automating the comparison. When a user enters text into the input field and clicks the (Check) button, the application removes any non-alphanumeric characters and converts the text to a uniform case (usually lowercase) to ensure accurate comparison. It then reverses the cleaned text and compares it to the original cleaned version. If the two match, the text is declared a palindrome. The application’s design prioritizes user experience. Its responsive nature ensures that it functions well across various devices, while the clear and concise interface makes it accessible to users of all ages and technical backgrounds.",
+      image: "images/Palindrome.png",
+      technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
+      liveLink: "https://zohalmirkhel.github.io/palindrome/",
+      sourceLink: " https://github.com/ZohalMirkhel/palindrome",
+    },
+    {
+      title: "Survey Form",
+      shortDescription: "This web form collects user feedback to improve the freeCodeCamp platform. It asks for the user's name, email, age (optional), current role, recommendation likelihood, favorite features, improvement suggestions, and additional comments. Users are prompted to submit the form after completion.",
+      longDescription: "This survey form is designed to collect detailed user feedback to improve the freeCodeCamp platform. With a modern and responsive design, the form ensures an optimal user experience across various devices. It includes several fields to capture comprehensive user input. The form concludes with a submit button for users to send their responses. This comprehensive survey aims to collect valuable insights from the user community to drive continuous improvement of the freeCodeCamp platform, enhancing its user-friendliness and effectiveness.",
+      image: "images/sf.png",
+      technologies: ["HTML", "CSS", "Git", "GitHub"],
+      liveLink: "https://github.com/ZohalMirkhel/survey-form",
+      sourceLink: "https://github.com/ZohalMirkhel/survey-form",
+    },
   {
     title: "Roman Number Converter",
     shortDescription: "The Roman Number Converter is a web application that allows users to convert Arabic numbers to Roman numerals. It provides an intuitive interface where users can enter a number and receive its Roman numeral equivalent.",
     longDescription: "The Roman Number Converter is a web application designed to convert Arabic numbers into Roman numerals. The application provides a user-friendly interface where users can enter any Arabic number within the accepted range and immediately receive its Roman numeral equivalent. This tool is useful for educational purposes, historical research, or any situation requiring the conversion of numerical data into Roman numerals. With its straightforward design and efficient functionality, the Roman Number Converter offers a seamless user experience, ensuring accurate and reliable results with every use.",
-    image: "images/roman number convertor.jpg",
+    image: "images/roman numerial convertot.jpg",
     technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
     liveLink: "https://walwalasafi.github.io/Roman-Number-Converter/",
     sourceLink: "https://github.com/WALWALASAFI/Roman-Number-Converter",
   },
+  {
+    title: "ODIN project",
+    shortDescription:"this is my first project that has a simple design with just one header and aprahraph",
+    longDescription:"this is my first project that has a simple design with just one header and aprahraph",
+    image: "images/odin screenshot.jpg",
+    technologies: ["HTML", "CSS",  "GitHub"],
+    liveLink: "",
+    sourceLink: "",
+  },
 ];
 
-projects.forEach((project, index) => {
-  const projectElement = document.createElement("div");
-  projectElement.classList.add("project-card");
+// Function to show the popup
+if (myProjects && popUp && popupContent && closePop) {
+  myProjects.innerHTML = projects
+    .map(
+      (project, index) => `
+      <div class="proj">
+        <h3>${project.title}</h3>
+        <img src="${project.image}" alt="${project.title}" />
+        <p>${project.shortDescription}</p>
+        <button class="popup-button-more" onclick="showPopup(${index})">Learn More</button>
+      </div>`
+    )
+    .join("");
 
-  projectElement.innerHTML = `
-    <div class="project-image">
-      <img src="${project.image}" alt="${project.title}">
-    </div>
-    <div class="project-content">
-      <h2>${project.title}</h2>
-      <p>${project.shortDescription}</p>
-      <button class="project-btn" onclick="showProject(${index})">Read More</button>
-    </div>
-  `;
-
-  myProjects.appendChild(projectElement);
-});
-
-function showProject(index) {
-  const project = projects[index];
-  popUp.style.display = "flex";
-  body.style.overflow = "hidden";
-
-  popupContent.innerHTML = `
-    <div class="pop-up-image">
-      <img src="${project.image}" alt="${project.title}">
-    </div>
-    <div class="pop-up-content">
-      <h2>${project.title}</h2>
+  window.showPopup = function (index) {
+    const project = projects[index];
+    popupContent.innerHTML = `
+      <button id="close-pop" class="close-btn">&times;</button>
+      <h3>${project.title}</h3>
+      <img src="${project.image}" alt="${project.title}" />
       <p>${project.longDescription}</p>
-      <div class="technologies">
-        <h3>Technologies used:</h3>
-        <ul>
-          ${project.technologies.map(tech => `<li>${tech}</li>`).join("")}
-        </ul>
-      </div>
-      <div class="pop-up-links">
-        <a href="${project.liveLink}" target="_blank">Live Demo</a>
-        <a href="${project.sourceLink}" target="_blank">Source Code</a>
-      </div>
-      <button id="close-pop" onclick="closePopup()">Close</button>
-    </div>
-  `;
-}
+      <p>Technologies: ${project.technologies.join(", ")}</p>
+      <a class="popup-button" id="live" href="${project.liveLink}" target="_blank">Live Site</a>
+      <a class="popup-button" id="git" href="${project.sourceLink}" target="_blank">GitHub Repository</a>
+    `;
+    popUp.classList.remove("hidden");
+    mainContent.classList.add("blurred");
+    body.classList.add("no-scroll");
 
-function closePopup() {
-  popUp.style.display = "none";
-  body.style.overflow = "auto";
-}
-
-// Smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
+    document.getElementById("close-pop").addEventListener("click", () => {
+      popUp.classList.add("hidden");
+      mainContent.classList.remove("blurred");
+      body.classList.remove("no-scroll");
     });
-  });
+  };
+}
+
+const aboutMe = document.getElementById("certification");
+const certification = document.getElementById("certification");
+
+const skills = {
+  certificates: [
+    { name: "Responsive Web Design", image: "certificate/responsive certificate.jpg", link: "#" },
+    { name: "JavaScript", image: "certificate/java script certificate.jpg", link: "#" },
+  ],
+};
+
+certification.innerHTML = `
+  <div id="certification-section">
+    <h2>Certificates</h2>
+    <div class="cert-list">
+      ${skills.certificates
+        .map(
+          (certificate) => `
+        <div class="cert">
+          <h3>${certificate.name}</h3>
+            <img src="${certificate.image}" alt="${certificate.name}"/>
+        </div>`
+        )
+        .join("")}
+    </div>
+  </div>
+`;
+
+istener("DOMContentLoaded", () => {
+  const skills = {
+    languages: ["HTML", "CSS", "JS", "Java", "WordPress", "Bootstrap"],
+    professionalSkills: ["Team Work", "Multi Task", "Critical thinking", "Communication", "Time management", "Creativity"],
+    softSkills: ["Ideas", "Teamwork", "Clean Code", "Code Review"]
+  };
+
+  const skillsContainer = document.getElementById('skills');
+
+  if (skillsContainer) {
+    skillsContainer.innerHTML = `
+      <h2>Skills</h2>
+      <div id="skills-content">
+        <div class="list">
+          <div class="skills-category">
+            <h3 class="skills-header" data-target="#languages-list">Languages</h3>
+            <ul class="skills-list" id="languages-list"></ul>
+          </div>
+          <div class="skills-category">
+            <h3 class="skills-header" data-target="#professional-skills-list">Professional Skills</h3>
+            <ul class="skills-list" id="professional-skills-list"></ul>
+          </div>
+          <div class="skills-category">
+            <h3 class="skills-header" data-target="#soft-skills-list">Soft Skills</h3>
+            <ul class="skills-list" id="soft-skills-list"></ul>
+          </div>
+        </div>
+        <div class="image">
+          <div id="skills-image">
+            <img src="images/skills.png" alt="Skills Image">
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Append list items to respective lists
+    const languagesList = document.getElementById('languages-list');
+    const professionalSkillsList = document.getElementById('professional-skills-list');
+    const softSkillsList = document.getElementById('soft-skills-list');
+
+    skills.languages.forEach(language => {
+      const listItem = document.createElement('li');
+      listItem.textContent = language;
+      languagesList.appendChild(listItem);
+    });
+
+    skills.professionalSkills.forEach(skill => {
+      const listItem = document.createElement('li');
+      listItem.textContent = skill;
+      professionalSkillsList.appendChild(listItem);
+    });
+
+    skills.softSkills.forEach(skill => {
+      const listItem = document.createElement('li');
+      listItem.textContent = skill;
+      softSkillsList.appendChild(listItem);
+    });
+
+    // Add click event to toggle visibility of lists
+    document.querySelectorAll('.skills-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const targetList = document.querySelector(header.dataset.target);
+
+        if (targetList.classList.contains('visible')) {
+          // If the clicked list is already visible, close it
+          targetList.classList.remove('visible');
+        } else {
+          // Close any currently open lists
+          document.querySelectorAll('.skills-list.visible').forEach(list => {
+            list.classList.remove('visible');
+          });
+          // Open the clicked list
+          targetList.classList.add('visible');
+        }
+      });
+    });
+  }
 });
 
-// Show and hide sidebar
-function showSidebar() {
-  const sidebar = document.querySelector('.sidebar');
-  sidebar.style.display = 'flex';
-}
+// Contact form handling
+document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.getElementById("contact-form");
+  const errorMessage = document.getElementById("error-message");
 
-function hideSidebar() {
-  const sidebar = document.querySelector('.sidebar');
-  sidebar.style.display = 'none';
-}
+  if (contactForm && errorMessage) {
+    contactForm.addEventListener("submit", (event) => {
+      const email = document.getElementById("email").value;
+      if (email !== email.toLowerCase()) {
+        event.preventDefault();
+        errorMessage.classList.remove("hidden");
+      } else {
+        errorMessage.classList.add("hidden");
+      }
+    });
 
-// Form submission
-const contactForm = document.getElementById("contact-form");
-
-if (contactForm) {
-  contactForm.addEventListener("submit", function(event) {
-    event.preventDefault();
-    const formData = new FormData(contactForm);
-    const name = formData.get("name");
-    const email = formData.get("email");
-    const message = formData.get("message");
-
-    // Here you can handle form submission, like sending the data to a backend server
-    // For demonstration purposes, let's log the form data to console
-    console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
-    alert("Thank you! Your message has been sent.");
-
-    // Optionally, clear the form
-    contactForm.reset();
-  });
-}
-
+    const formFields = ["name", "email", "message"];
+    formFields.forEach((field) => {
+      const input = document.getElementById(field);
+      if (input) {
+        input.value = localStorage.getItem(field) || "";
+        input.addEventListener("input", () => {
+          localStorage.setItem(field, input.value);
+        });
+      }
+    });
+  }
+});
