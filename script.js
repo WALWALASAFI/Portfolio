@@ -98,8 +98,8 @@ const projects = [
   },
   {
     title: "Product Landing Page",
-    shortDescription: "This is a product landing page that showcases online shopping. This project is an e-commerce website dedicated to showcasing and selling traditional Afghan clothing and accessories. It features a responsive design, easy-to-use navigation, product listings, an email subscription form, and a search bar.",
-    longDescription: "This project is an e-commerce website dedicated to showcasing and selling traditional Afghan clothing and accessories. It features a responsive design, easy-to-use navigation, product listings, an email subscription form, and a search bar.",
+    shortDescription: "Convenience at Your Doorstep: With online fresh fruit shopping, the bounty of the orchard is just a click away. Say goodbye to long trips to the grocery store or local market. Now, you can browse through a diverse array of fresh fruits from the comfort of your home, office, or anywhere with an internet connection.Online fresh fruit shopping brings the farm-fresh goodness of nature directly to your fingertips,🥰",
+    longDescription: "Convenience at Your Doorstep: With online fresh fruit shopping, the bounty of the orchard is just a click away. Say goodbye to long trips to the grocery store or local market. Now, you can browse through a diverse array of fresh fruits from the comfort of your home, office, or anywhere with an internet connection.Online fresh fruit shopping brings the farm-fresh goodness of nature directly to your fingertips,🥰",
     image: "images/landing.jpg",
     technologies: ["HTML", "CSS", "Git", "GitHub"],
     liveLink: "https://walwalasafi.github.io/product-landing-page/",
@@ -143,8 +143,8 @@ const projects = [
     },
     {
       title: "Survey Form",
-      shortDescription: "This web form collects user feedback to improve the freeCodeCamp platform. It asks for the user's name, email, age (optional), current role, recommendation likelihood, favorite features, improvement suggestions, and additional comments. Users are prompted to submit the form after completion.",
-      longDescription: "This survey form is designed to collect detailed user feedback to improve the freeCodeCamp platform. With a modern and responsive design, the form ensures an optimal user experience across various devices. It includes several fields to capture comprehensive user input. The form concludes with a submit button for users to send their responses. This comprehensive survey aims to collect valuable insights from the user community to drive continuous improvement of the freeCodeCamp platform, enhancing its user-friendliness and effectiveness.",
+      shortDescription: "this is student survey form, which has some requirement for submitting the link, it has school name, student name, lastname, date , email, and finally some obtion that is obtionally to choose one of them ",
+      longDescription: "this is student survey form, which has some requirement for submitting the link, it has school name, student name, lastname, date , email, and finally some obtion that is obtionally to choose one of them ",
       image: "images/survey.jpg",
       technologies: ["HTML", "CSS", "Git", "GitHub"],
       liveLink: "https://walwalasafi.github.io/survey-form/",
