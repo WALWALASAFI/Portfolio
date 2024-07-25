@@ -542,22 +542,23 @@ body {
   margin-left: 40%;
 }
 
-#skill-section p{
-  margin-left: 37%;
+#bar p{
+  margin-left: 38%;
 }
 
 .skill-main{
   width: 80%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 50px;
+  grid-column-gap: 30px;
   grid-row-gap: 15px;
 }
 
 .skill-main .skill-bar .info{
   display: flex;
   justify-content: space-between;
-  padding: 10 10px;
+  padding: 0 10px;
+  margin-right: 30%;
 }
 
 .skill-bar .bar{
@@ -566,6 +567,15 @@ body {
   background-color: #494c4e;
   border-radius: 25px;
   margin-top: 5px;
+}
+
+.skill-bar .bar span{
+  width: 20%;
+  height: 10px;
+  position: absolute;
+  background-color: #286bae;
+  border-radius: 25px;
+  margin-top: 0px;
 }
 
 .skill-bar .bar .Html{
@@ -581,14 +591,6 @@ body {
   }
 }
 
-.skill-bar .bar span{
-  width: 20%;
-  height: 10px;
-  position: absolute;
-  background-color: #286bae;
-  border-radius: 25px;
-  margin-top: 0px;
-}
 #contact {
   justify-content: center;
   align-items: center;
@@ -613,19 +615,21 @@ body {
 
 .contact-info {
   width: 43%;
-  background-color: #0e1e2d;
-  height: 400px;
+  background-color: #033e75;
+  height: 300px;
+  margin-top: 20%;
 }
 
 .contact-info h2 {
   padding: 6%;
+  margin-top: 0%;
 }
 
-.contact-form h2,
-.contact-info h2 {
+.contact-form h2 {
   color: #fff;
   margin-bottom: 1em;
   font-family: 'Sansita One';
+  margin-top: 20%;
 }
 
 .contact-info p {
@@ -643,7 +647,7 @@ body {
 
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
+  width: 90%;
   padding: 0.5em;
   margin-bottom: 2em;
   border: none;
