@@ -286,6 +286,7 @@ body {
   padding-left: 60px;
   margin-left: 36%;
   margin-right: 34%;
+  margin-top: 10%;
 }
 
 #my-projects {
@@ -430,7 +431,6 @@ body {
   background: #333;
 }
 
-/* Certification */
 #certification {
   padding: 35px;
   text-align: center;
@@ -446,6 +446,7 @@ body {
   justify-content: center;
   text-align: center;
   align-items: center;
+  margin-top: 10%;
   padding-left: 60px;
   margin-left: 36%;
   margin-right: 34%;
@@ -519,7 +520,6 @@ body {
   background-color: #1a334b;
 }
 
-/* Skills Section */
 #skills {
   display: flex;
   justify-content: center;

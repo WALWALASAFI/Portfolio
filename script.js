@@ -161,8 +161,8 @@ const projects = [
   },
   {
     title: "ODIN project",
-    shortDescription:"this is my first project that has a simple design with just one header and aprahraph",
-    longDescription:"this is my first project that has a simple design with just one header and aprahraph",
+    shortDescription:"this is my first project that has a simple design with just one header and aprahraph also has a simple style according to the paragraph and the title",
+    longDescription:"this is my first project that has a simple design with just one header and aprahraph also has a simple style according to the paragraph and the title",
     image: "images/odin screenshot.jpg",
     technologies: ["HTML", "CSS",  "GitHub"],
     liveLink: "https://walwalasafi.github.io/odin-project/",
@@ -170,45 +170,85 @@ const projects = [
   },
 ];
 
-// Function to show the popup
-if (myProjects && popUp && popupContent && closePop) {
+function displayProjects() {
   myProjects.innerHTML = projects
     .map(
       (project, index) => `
-      <div class="proj">
-        <h3>${project.title}</h3>
-        <img src="${project.image}" alt="${project.title}" />
-        <p>${project.shortDescription}</p>
-        <button class="popup-button-more" onclick="showPopup(${index})">Learn More</button>
-      </div>`
+    <div class="proj" id="proj-${index}">
+      <h3>${project.title}</h3>
+      <img src="${project.image}" alt="${project.title}" />
+      <p id="desc">${project.shortDescription}</p>
+      <button class="popup-button-more" onclick="showPopup(${index})">Learn More</button>
+    </div>
+    `
     )
     .join("");
 
-  window.showPopup = function (index) {
-    const project = projects[index];
-    popupContent.innerHTML = `
-      <button id="close-pop" class="close-btn">&times;</button>
-      <h3>${project.title}</h3>
-      <img src="${project.image}" alt="${project.title}" />
-      <p>${project.longDescription}</p>
-      <p>Technologies: ${project.technologies.join(", ")}</p>
-      <a class="popup-button" id="live" href="${project.liveLink}" target="_blank">Live Site</a>
-      <a class="popup-button" id="git" href="${project.sourceLink}" target="_blank">GitHub Repository</a>
-    `;
-    popUp.classList.remove("hidden");
-    mainContent.classList.add("blurred");
-    body.classList.add("no-scroll");
+  let currentItems = 2;
+  const boxes = document.querySelectorAll('.proj');
 
-    document.getElementById("close-pop").addEventListener("click", () => {
-      popUp.classList.add("hidden");
-      mainContent.classList.remove("blurred");
-      body.classList.remove("no-scroll");
-    });
-  };
+  boxes.forEach((box, index) => {
+    if (index < currentItems) {
+      box.style.display = 'block';
+    }
+  });
+
+  showMoreProjectsBtn.onclick = () => {
+    if (showMoreProjectsBtn.innerText === "Show More") {
+      for (let i = currentItems; i < currentItems + 2; i++) {
+        if (boxes[i]) {
+          boxes[i].style.display = 'block';
+        }
+      }
+      currentItems += 2;
+      if (currentItems >= boxes.length) {
+        showMoreProjectsBtn.innerText = "Show Less";
+      }
+    } else {
+      currentItems = 2;
+      boxes.forEach((box, index) => {
+        if (index >= currentItems) {
+          box.style.display = 'none';
+        }
+      });
+      showMoreProjectsBtn.innerText = "Show More";
+      document.getElementById("project").scrollIntoView({ behavior: "smooth" });
+    }
+    console.log("Updated button text:", btnText.innerText);
+    console.log("SVG class list:", showMoreProjectsBtn.classList);
+  }
 }
 
-const aboutMe = document.getElementById("certification");
-const certification = document.getElementById("certification");
+window.showPopup = function (index) {
+  const project = projects[index];
+  popupContent.innerHTML = `
+    <button id="close-pop" class="close-btn">&times;</button>
+    <h3>${project.title}</h3>
+    <img src="${project.image}" alt="${project.title}" />
+    <p>${project.longDescription}</p>
+    <p>Technologies: ${project.technologies.join(", ")}</p>
+    <a class="popup-button" id="live" href="${project.liveLink}" target="_blank">Live Site</a>
+    <a class="popup-button" id="git" href="${project.sourceLink}" target="_blank">GitHub Repository</a>
+    <button id="mobile-close-pop" class="close-btn-mobile">Close</button>
+  `;
+  popUp.classList.remove("hidden");
+  mainContent.classList.add("blurred");
+  body.classList.add("no-scroll");
+
+  document.getElementById("close-pop").addEventListener("click", () => {
+    popUp.classList.add("hidden");
+    mainContent.classList.remove("blurred");
+    body.classList.remove("no-scroll");
+  });
+  document.getElementById("mobile-close-pop").addEventListener("click", () => {
+    popUp.classList.add("hidden");
+    mainContent.classList.remove("blurred");
+    body.classList.remove("no-scroll");
+  });
+}
+
+document.addEventListener("DOMContentLoaded", displayProjects);
+
 
 const skills = {
   certificates: [
@@ -233,3 +273,4 @@ certification.innerHTML = `
     </div>
   </div>
 `;
+
