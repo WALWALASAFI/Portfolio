@@ -138,8 +138,8 @@ const projects = [
       longDescription: "This web application simplifies the process of identifying palindromes by automating the comparison. When a user enters text into the input field and clicks the (Check) button, the application removes any non-alphanumeric characters and converts the text to a uniform case (usually lowercase) to ensure accurate comparison. It then reverses the cleaned text and compares it to the original cleaned version. If the two match, the text is declared a palindrome. The application’s design prioritizes user experience. Its responsive nature ensures that it functions well across various devices, while the clear and concise interface makes it accessible to users of all ages and technical backgrounds.",
       image: "images/palindrome checker.jpg",
       technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
-      liveLink: "",
-      sourceLink: "",
+      liveLink: "https://walwalasafi.github.io/Palindrome-checker-project/",
+      sourceLink: "https://github.com/WALWALASAFI/Palindrome-checker-project",
     },
     {
       title: "Survey Form",
@@ -147,8 +147,8 @@ const projects = [
       longDescription: "This survey form is designed to collect detailed user feedback to improve the freeCodeCamp platform. With a modern and responsive design, the form ensures an optimal user experience across various devices. It includes several fields to capture comprehensive user input. The form concludes with a submit button for users to send their responses. This comprehensive survey aims to collect valuable insights from the user community to drive continuous improvement of the freeCodeCamp platform, enhancing its user-friendliness and effectiveness.",
       image: "images/survey.jpg",
       technologies: ["HTML", "CSS", "Git", "GitHub"],
-      liveLink: "",
-      sourceLink: "",
+      liveLink: "https://walwalasafi.github.io/survey-form/",
+      sourceLink: "https://github.com/WALWALASAFI/survey-form",
     },
   {
     title: "Roman Number Converter",
@@ -165,8 +165,8 @@ const projects = [
     longDescription:"this is my first project that has a simple design with just one header and aprahraph",
     image: "images/odin screenshot.jpg",
     technologies: ["HTML", "CSS",  "GitHub"],
-    liveLink: "",
-    sourceLink: "",
+    liveLink: "https://walwalasafi.github.io/odin-project/",
+    sourceLink: "https://github.com/WALWALASAFI/odin-project",
   },
 ];
 
