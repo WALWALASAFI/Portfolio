@@ -39,13 +39,13 @@ document.addEventListener("DOMContentLoaded", () => {
   if (aboutMe) {
     aboutMe.innerHTML = `
       <div class="about-section">
-        <div class="about-image">
-          <img src="images/image of about.jpg" alt="About Image">
-        </div>
         <div class="about-text">
           <h2>About me</h2>
           <p>I'm Walwala Safi, a passionate web developer with a knack for crafting digital experiences that blend creativity with functionality. With a keen eye for design and a love for clean code, I specialize in creating responsive and intuitive websites that not only look great but also perform flawlessly across all devices. Beyond coding, I enjoy exploring the intersections of design and technology, constantly seeking inspiration from diverse sources to bring fresh perspectives to my work.</p>
+          <div class="about-image">
+          <img src="images/page.jpg" alt="About Image">
         </div>
+          </div>
       </div>
     `;
   }
