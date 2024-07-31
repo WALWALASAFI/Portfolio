@@ -167,10 +167,10 @@ body {
 }
 
 .about-image img {
-  width: 50%;
-  float: left; 
+  width: 30%;
+  float:right; 
   margin-top: 60px;
-  border-radius: 20%;
+  border-radius: 10%;
 }
 
 #about-me {
