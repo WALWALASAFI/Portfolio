@@ -599,7 +599,7 @@ body {
 
 }
 .skill-bar .bar .css{
-  width: 85%;
+  width: 95%;
   animation: css 3s;
 }
 
@@ -607,43 +607,43 @@ body {
   0%{
     width: 0;
   }100%{
-    width: 85%;
+    width: 95%;
   }
 
 }
 .skill-bar .bar .js{
-  width: 60%;
+  width: 90%;
   animation: js 3s;
 }
 
 @keyframes js {
   0%{
     width: 0;
-  }100%{
+  }200%{
     width: 60%;
   }
 
 }
-.skill-bar .bar .web-design{
-  width: 90%;
-  animation: web-design 3s;
+.skill-bar .bar .Problem-solver{
+  width: 100%;
+  animation: problem-solver 3s;
 }
 
-@keyframes web-design {
+@keyframes Problem-solver {
   0%{
     width: 0;
   }100%{
-    width: 90%;
+    width: 100%;
   }
 
 }
 
-.skill-bar .bar .Problem-solver {
+.skill-bar .bar .web-design {
   width: 100%;
-  animation: Problem solver 3s;
+  animation: web design 3s;
 }
 
-@keyframes Problem-solver {
+@keyframes web-design {
   0%{
     width: 0;
   }100%{
