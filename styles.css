@@ -155,6 +155,19 @@ body {
   color: #fff;
 }
 
+#navbar {
+  width: 70%;
+  height: 60px;
+  margin: 0;
+  justify-content: flex-end;
+  background-color: #286bae;
+  padding: 0;
+  border-radius: 0;
+  flex-wrap: wrap;
+  position: fixed;
+  z-index: 10;
+}
+
 .about-content {
   display: flex;
   justify-content: center;
@@ -286,11 +299,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   justify-items: center;
 }
-#my-projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  justify-items: center;
-}
 
 .proj {
   background: transparent;
@@ -417,14 +425,6 @@ body {
   text-decoration: none;
   border-radius: 30px;
   transition: background 0.3s;
-}
-
-#live {
-  float: left;
-}
-
-#git {
-  float: right;
 }
 
 .popup-button:hover {
