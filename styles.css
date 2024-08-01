@@ -757,3 +757,20 @@ body {
   margin-right: 1em;
   color: #000;
 }
+
+@media (max-width: 1000px) {
+  .sidebar {
+    background: linear-gradient(to bottom, #286bae 0%,#4273a4 20%, #2b3e52 35%, black 100%);
+    list-style: none;
+    width: 40%;
+    padding: 4%;
+  }
+
+  .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
+    text-decoration: none;
+  }
+}
