@@ -675,7 +675,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   max-width: 800px;
   width: 100%;
-  margin-top: 25%;
+  margin-top: 70%;
   margin-left: 19%;
   margin-bottom: 0%;
 }
@@ -693,19 +693,18 @@ body {
   width: 43%;
   background-color: #033e75;
   height: 300px;
-  margin-top: 20%;
+  margin-top: 10%;
 }
 
-.contact-info h2 {
-  padding: 6%;
-  margin-top: 0%;
+.contact-info h2{
+  color: white;
+  text-align: center;
 }
 
 .contact-form h2 {
   color: #fff;
   margin-bottom: 1em;
   font-family: 'Sansita One';
-  margin-top: 20%;
 }
 
 .contact-info p {
@@ -718,7 +717,7 @@ body {
 .contact-form p {
   color: #fff;
   margin-bottom: 1em;
-  padding: 7% 0;
+  padding: 2% 0;
 }
 
 .contact-form input,
