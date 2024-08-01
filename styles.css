@@ -705,6 +705,7 @@ body {
   color: #fff;
   margin-bottom: 1em;
   font-family: 'Sansita One';
+  margin-top: 10%;
 }
 
 .contact-info p {
@@ -758,6 +759,20 @@ body {
   margin-right: 1em;
   color: #000;
 }
+
+#footer {
+  text-align: center;
+  padding: 15px 0;
+  color: #ffffff;
+  background: linear-gradient(to bottom, #286bae 0%,#4273a4 20%, #2b3e52 35%, black 100%);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 15x;
+  text-align: center;
+  font-weight: bold;
+}
+
 
 @media (max-width: 1000px) {
   .sidebar li a {
