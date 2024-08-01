@@ -583,13 +583,6 @@ body {
   animation: Html 3s;
 }
 
-@keyframes Html{
-  0%{
-    width: 0;
-  }100%{
-    width: 90%;
-  }
-}
 
 #contact {
   justify-content: center;
