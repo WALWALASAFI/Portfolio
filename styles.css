@@ -687,13 +687,14 @@ body {
 
 .contact-form {
   width: 55%;
+  margin-top: 10%;
 }
 
 .contact-info {
   width: 43%;
   background-color: #033e75;
   height: 300px;
-  margin-top: 10%;
+  margin-top: 20%;
 }
 
 .contact-info h2{
