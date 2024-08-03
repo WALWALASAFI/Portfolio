@@ -15,19 +15,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroContent = document.querySelector('.hero-content');
 
   heroText.innerHTML = `
-      <div class="circle"></div>
-      <h3>Hello, My Name is</h3>
-      <h2>Walwala Safi</h2>
-      <h1>Web Developer</h1>
-      <a href="#contact" class="contact-btn">Contact Me</a>
+    <div class="circle"></div>
+    <h3>Hello, My Name is</h3>
+    <h2>Walwala Safi</h2>
+    <h1>Web Developer</h1>
+    <a href="#contact" class="contact-btn">Contact Me</a>
   `;
 
   const socialLinks = document.createElement('div');
   socialLinks.className = 'social-links';
   socialLinks.innerHTML = `
-      <a href="https://github.com/WALWALASAFI/"><i class="fab fa-github"></i></a>
-      <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-      <a href="https://www.linkedin.com/in/walwala-safi-65b56530a/"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/WALWALASAFI/"><i class="fab fa-github"></i></a>
+    <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.linkedin.com/in/walwala-safi-65b56530a/"><i class="fab fa-linkedin"></i></a>
   `;
 
   heroContent.appendChild(socialLinks);
@@ -72,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
 const myProjects = document.getElementById('my-projects');
 const popUp = document.getElementById('pop-up');
 const popupContent = document.getElementById('popup-content');
-const closePop = document.getElementById('close-pop');
 const mainContent = document.getElementById('main-content');
 const body = document.body;
 
@@ -84,7 +83,7 @@ const projects = [
     image: 'images/telephone number validitor.jpg',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Git', 'GitHub'],
     liveLink: 'https://walwalasafi.github.io/Telephone-Number-Validator/',
-    sourceLink: 'https://github.com/WALWALASAFI/Telephone-Number-Validator',
+    sourceLink: 'https://github.com/WALWALASAFI/Telephone-Number-Validator'
   },
   {
     title: 'Cash Register',
@@ -93,16 +92,16 @@ const projects = [
     image: 'images/cash register.jpg',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Git', 'GitHub'],
     liveLink: 'https://walwalasafi.github.io/Cash-register/',
-    sourceLink: 'https://github.com/WALWALASAFI/Cash-register',
+    sourceLink: 'https://github.com/WALWALASAFI/Cash-register'
   },
   {
     title: 'Product Landing Page',
-    shortDescription: 'Convenience at Your Doorstep: With online fresh fruit shopping, the bounty of the orchard is just a click away. Say goodbye to long trips to the grocery store or local market. Now, you can browse through a diverse array of fresh fruits from the comfort of your home, office, or anywhere with an internet connection.Online fresh fruit shopping brings the farm-fresh goodness of nature directly to your fingertips,🥰',
-    longDescription: 'Convenience at Your Doorstep: With online fresh fruit shopping, the bounty of the orchard is just a click away. Say goodbye to long trips to the grocery store or local market. Now, you can browse through a diverse array of fresh fruits from the comfort of your home, office, or anywhere with an internet connection.Online fresh fruit shopping brings the farm-fresh goodness of nature directly to your fingertips,🥰',
+    shortDescription: 'Convenience at Your Doorstep: With online fresh fruit shopping, the bounty of the orchard is just a click away. Say goodbye to long trips to the grocery store or local market. Now, you can browse through a diverse array of fresh fruits from the comfort of your home, office, or anywhere with an internet connection. Online fresh fruit shopping brings the farm-fresh goodness of nature directly to your fingertips,🥰',
+    longDescription: 'Convenience at Your Doorstep: With online fresh fruit shopping, the bounty of the orchard is just a click away. Say goodbye to long trips to the grocery store or local market. Now, you can browse through a diverse array of fresh fruits from the comfort of your home, office, or anywhere with an internet connection. Online fresh fruit shopping brings the farm-fresh goodness of nature directly to your fingertips,🥰',
     image: 'images/landing.jpg',
     technologies: ['HTML', 'CSS', 'Git', 'GitHub'],
     liveLink: 'https://walwalasafi.github.io/product-landing-page/',
-    sourceLink: 'https://github.com/WALWALASAFI/product-landing-page',
+    sourceLink: 'https://github.com/WALWALASAFI/product-landing-page'
   },
   {
     title: 'Pokémon Search App',
@@ -111,7 +110,7 @@ const projects = [
     image: 'images/pic of pokemon.jpg',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Git', 'GitHub', 'Spilne'],
     liveLink: 'https://walwalasafi.github.io/Pok-mon-Search-App/',
-    sourceLink: 'https://github.com/WALWALASAFI/Pok-mon-Search-App',
+    sourceLink: 'https://github.com/WALWALASAFI/Pok-mon-Search-App'
   },
   {
     title: 'Portfolio Project',
@@ -120,55 +119,49 @@ const projects = [
     image: 'images/portfolio.jpg',
     technologies: ['HTML', 'CSS', 'Git', 'GitHub'],
     liveLink: 'https://walwalasafi.github.io/personal-portfolio-webpage/',
-    sourceLink: 'https://github.com/WALWALASAFI/personal-portfolio-webpage',
+    sourceLink: 'https://github.com/WALWALASAFI/personal-portfolio-webpage'
   },
   {
-		title: 'Documentation Page',
-		shortDescription: 'This is a documentation page about HTML, covering topics about the HTML language and functionality.',
-		longDescription: 'This is a documentation page about HTML, covering topics about the HTML language and functionality.',
-		image: 'images/technical documention page.jpg',
-		technologies: ['HTML', 'CSS', 'Git', 'GitHub'],
-		liveLink: 'https://walwalasafi.github.io/technical_documentation_page/',
-		sourceLink: 'https://github.com/WALWALASAFI/technical_documentation_page',
-	},
+    title: 'Documentation Page',
+    shortDescription: 'This is a documentation page about HTML, covering topics about the HTML language and functionality.',
+    longDescription: 'This is a documentation page about HTML, covering topics about the HTML language and functionality.',
+    image: 'images/technical documention page.jpg',
+    technologies: ['HTML', 'CSS', 'Git', 'GitHub'],
+    liveLink: 'https://walwalasafi.github.io/technical_documentation_page/',
+    sourceLink: 'https://github.com/WALWALASAFI/technical_documentation_page'
+  },
 	{
-		title: 'Palindrome',
-		shortDescription: 'This web application determines if a given text is a palindrome. It features an input field to enter text, a button to initiate the check, and a display area for the result. The design is responsive, ensuring usability across various devices.',
-		longDescription: 'This web application simplifies the process of identifying palindromes by automating the comparison. When a user enters text into the input field and clicks the (Check) button, the application removes any non-alphanumeric characters and converts the text to a uniform case (usually lowercase) to ensure accurate comparison. It then reverses the cleaned text and compares it to the original cleaned version. If the two match, the text is declared a palindrome. The application’s design prioritizes user experience. Its responsive nature ensures that it functions well across various devices, while the clear and concise interface makes it accessible to users of all ages and technical backgrounds.',
-		image: 'images/palindrome checker.jpg',
-		technologies: ['HTML', 'CSS', 'JavaScript', 'Git', 'GitHub'],
-		liveLink: 'https://walwalasafi.github.io/Palindrome-checker-project/',
-		sourceLink: 'https://github.com/WALWALASAFI/Palindrome-checker-project',
-	},
-	{
-		title: 'Survey Form',
-		shortDescription: 'This is a student survey form with fields for school name, student name, last name, date, email, and optional choices.',
-		longDescription: 'This is a student survey form with fields for school name, student name, last name, date, email, and optional choices.',
-		image: 'images/survey.jpg',
-		technologies: ['HTML', 'CSS', 'Git', 'GitHub'],
-		liveLink: 'https://walwalasafi.github.io/survey-form/',
-		sourceLink: 'https://github.com/WALWALASAFI/survey-form',
-	},
-	{
-		title: 'Roman Number Converter',
-		shortDescription: 'The Roman Number Converter is a web application that allows users to convert Arabic numbers to Roman numerals. It provides an intuitive interface where users can enter a number and receive its Roman numeral equivalent.',
-		longDescription: 'The Roman Number Converter is a web application designed to convert Arabic numbers into Roman numerals. The application provides a user-friendly interface where users can enter any Arabic number within the accepted range and immediately receive its Roman numeral equivalent. This tool is useful for educational purposes, historical research, or any situation requiring the conversion of numerical data into Roman numerals. With its straightforward design and efficient functionality, the Roman Number Converter offers a seamless user experience, ensuring accurate and reliable results with every use.',
-		image: 'images/roman numerial convertot.jpg',
-		technologies: ['HTML', 'CSS', 'JavaScript', 'Git', 'GitHub'],
-		liveLink: 'https://walwalasafi.github.io/Roman-Number-Converter/',
-		sourceLink: 'https://github.com/WALWALASAFI/Roman-Number-Converter',
-	},
-	{
-		title: 'ODIN Project',
-		shortDescription: 'This is my first project that has a simple design with just one header and paragraph, also has a simple style according to the paragraph and the title.',
-		longDescription: 'This is my first project that has a simple design with just one header and paragraph, also has a simple style according to the paragraph and the title.',
-		image: 'images/odin screenshot.jpg',
-		technologies: ['HTML', 'CSS', 'GitHub'],
-		liveLink: 'https://walwalasafi.github.io/odin-project/',
-		sourceLink: 'https://github.com/WALWALASAFI/odin-project',
-	},
-];
-
+		sourceLink: 'https://github.com/WALWALASAFI/Palindrome-checker-project'
+		},
+		{
+			title: 'Survey Form',
+			shortDescription: 'This is a student survey form with fields for school name, student name, last name, date, email, and optional choices.',
+			longDescription: 'This is a student survey form with fields for school name, student name, last name, date, email, and optional choices.',
+			image: 'images/survey.jpg',
+			technologies: ['HTML', 'CSS', 'Git', 'GitHub'],
+			liveLink: 'https://walwalasafi.github.io/survey-form/',
+			sourceLink: 'https://github.com/WALWALASAFI/survey-form'
+		},
+		{
+			title: 'Roman Number Converter',
+			shortDescription: 'The Roman Number Converter is a web application that allows users to convert Arabic numbers to Roman numerals. It provides an intuitive interface where users can enter a number and receive its Roman numeral equivalent.',
+			longDescription: 'The Roman Number Converter is a web application designed to convert Arabic numbers into Roman numerals. The application provides a user-friendly interface where users can enter any Arabic number within the accepted range and immediately receive its Roman numeral equivalent. This tool is useful for educational purposes, historical research, or any situation requiring the conversion of numerical data into Roman numerals. With its straightforward design and efficient functionality, the Roman Number Converter offers a seamless user experience, ensuring accurate and reliable results with every use.',
+			image: 'images/roman numerial convertot.jpg',
+			technologies: ['HTML', 'CSS', 'JavaScript', 'Git', 'GitHub'],
+			liveLink: 'https://walwalasafi.github.io/Roman-Number-Converter/',
+			sourceLink: 'https://github.com/WALWALASAFI/Roman-Number-Converter'
+		},
+		{
+			title: 'ODIN Project',
+			shortDescription: 'This is my first project that has a simple design with just one header and paragraph, also has a simple style according to the paragraph and the title.',
+			longDescription: 'This is my first project that has a simple design with just one header and paragraph, also has a simple style according to the paragraph and the title.',
+			image: 'images/odin screenshot.jpg',
+			technologies: ['HTML', 'CSS', 'GitHub'],
+			liveLink: 'https://walwalasafi.github.io/odin-project/',
+			sourceLink: 'https://github.com/WALWALASAFI/odin-project'
+		}
+	];
+	
 function displayProjects() {
   myProjects.innerHTML = projects
     .map(
@@ -187,78 +180,80 @@ function displayProjects() {
   const boxes = document.querySelectorAll('.proj');
 
   boxes.forEach((box, index) => {
-    if (index < currentItems) {
-      box.style.display = 'block';
-    }
-  });
-
-  const showMoreProjectsBtn = document.getElementById('show-more-projects'); // Added definition
-
-  showMoreProjectsBtn.onclick = () => {
-    if (showMoreProjectsBtn.innerText === 'Show More') { // Corrected quotes
-      for (let i = currentItems; i < currentItems + 2; i++) { // Changed '++' to '+1'
-        if (boxes[i]) {
-          boxes[i].style.display = 'block';
-        }
-      }
-      currentItems += 2;
-      if (currentItems >= boxes.length) {
-        showMoreProjectsBtn.innerText = "Show Less";
-      }
-    } else {
-      currentItems = 2;
-      boxes.forEach((box, index) => {
-        if (index >= currentItems) {
-          box.style.display = 'none';
-        }
-      });
-      showMoreProjectsBtn.innerText = "Show More";
-      document.getElementById("project").scrollIntoView({ behavior: "smooth" });
-    }
-    console.log("Updated button text:", btnText.innerText);
-    console.log("SVG class list:", showMoreProjectsBtn.classList);
-  }
-}
-
-window.showPopup = function (index) {
-  const project = projects[index];
-  popupContent.innerHTML = `
-    <button id="close-pop" class="close-btn">&times;</button>
-    <h3>${project.title}</h3>
-    <img src="${project.image}" alt="${project.title}" />
-    <p>${project.longDescription}</p>
-    <p>Technologies: ${project.technologies.join(", ")}</p>
-    <a class="popup-button" id="live" href="${project.liveLink}" target="_blank">Live Site</a>
-    <a class="popup-button" id="git" href="${project.sourceLink}" target="_blank">GitHub Repository</a>
-    <button id="mobile-close-pop" class="close-btn-mobile">Close</button>
-  `;
-  popUp.classList.remove("hidden");
-  mainContent.classList.add("blurred");
-  body.classList.add("no-scroll");
-
-  const closePopup = () => {
-		popUp.classList.add('hidden');
-		mainContent.classList.remove('blurred');
-		body.classList.remove('no-scroll');
+		if (index < currentItems) {
+			box.style.display = 'block';
+		}
+	});
+	
+	const showMoreProjectsBtn = document.getElementById('show-more-projects'); // Added definition
+	
+	showMoreProjectsBtn.onclick = () => {
+		if (showMoreProjectsBtn.innerText === 'Show More') { // Corrected quotes
+			for (let i = currentItems; i < currentItems + 2; i++) { // Changed '++' to '+1'
+				if (boxes[i]) {
+					boxes[i].style.display = 'block';
+				}
+			}
+			currentItems += 2;
+			if (currentItems >= boxes.length) {
+				showMoreProjectsBtn.innerText = 'Show Less';
+			}
+		} else {
+			currentItems = 2;
+			boxes.forEach((box, index) => {
+				if (index >= currentItems) {
+					box.style.display = 'none';
+				}
+			});
+			showMoreProjectsBtn.innerText = 'Show More';
+			document.getElementById('project').scrollIntoView({ behavior: 'smooth' });
+		}
+		
+		// Fixed the undefined variable 'btnText'
+		console.log('Updated button text:', showMoreProjectsBtn.innerText);
+		console.log('SVG class list:', showMoreProjectsBtn.classList);
 	};
 	
-	const closeButton = document.getElementById('close-pop');
-	if (closeButton) {
-		closeButton.addEventListener('click', closePopup);
-	}
+	window.showPopup = function (index) {
+		const project = projects[index];
+		popupContent.innerHTML = `
+			<button id="close-pop" class="close-btn">&times;</button>
+			<h3>${project.title}</h3>
+			<img src="${project.image}" alt="${project.title}" />
+			<p>${project.longDescription}</p>
+			<p>Technologies: ${project.technologies.join(', ')}</p>
+			<a class="popup-button" id="live" href="${project.liveLink}" target="_blank">Live Site</a>
+			<a class="popup-button" id="git" href="${project.sourceLink}" target="_blank">GitHub Repository</a>
+			<button id="mobile-close-pop" class="close-btn-mobile">Close</button>
+		`;
+		popUp.classList.remove('hidden');
+		mainContent.classList.add('blurred');
+		body.classList.add('no-scroll');
 	
-	const mobileCloseButton = document.getElementById('mobile-close-pop');
-	if (mobileCloseButton) {
-		mobileCloseButton.addEventListener('click', closePopup);
-	}
+		const closePopup = () => {
+			popUp.classList.add('hidden');
+			mainContent.classList.remove('blurred');
+			body.classList.remove('no-scroll');
+		};
+		
+		const closeButton = document.getElementById('close-pop');
+		if (closeButton) {
+			closeButton.addEventListener('click', closePopup);
+		}
+		
+		const mobileCloseButton = document.getElementById('mobile-close-pop');
+		if (mobileCloseButton) {
+			mobileCloseButton.addEventListener('click', closePopup);
+		}
+	};
 	
 	document.addEventListener('DOMContentLoaded', displayProjects);
-	
+
 	const skills = {
 		certificates: [
 			{ name: 'Responsive Web Design', image: 'certificate/responsive certificate.jpg', link: '#' },
-			{ name: 'JavaScript', image: 'certificate/java script certificate.jpg', link: '#' }
-		]
+			{ name: 'JavaScript', image: 'certificate/java script certificate.jpg', link: '#' },
+		],
 	};
 	
 	const certification = document.getElementById('certification'); // Added definition
@@ -270,12 +265,13 @@ window.showPopup = function (index) {
 				${skills.certificates
 					.map(
 						(certificate) => `
-					<div class="cert">
-						<h3>${certificate.name}</h3>
-						<img src="${certificate.image}" alt="${certificate.name}"/>
-					</div>`
+						<div class="cert">
+							<h3>${certificate.name}</h3>
+							<img src="${certificate.image}" alt="${certificate.name}" />
+						</div>`
 					)
 					.join('')}
 			</div>
 		</div>
 	`};
+	
