@@ -10,9 +10,8 @@ function hideSidebar() {
   sidebar.style.display = 'none';
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   const heroText = document.querySelector('.hero-text');
-  const heroImage = document.querySelector('.hero-image');
   const heroContent = document.querySelector('.hero-content');
 
   heroText.innerHTML = `
@@ -34,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   heroContent.appendChild(socialLinks);
 });
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   const aboutMe = document.getElementById('about-me');
   if (aboutMe) {
     aboutMe.innerHTML = `
@@ -51,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   const myEdu = document.getElementById('my-edu');
   if (myEdu) {
     myEdu.innerHTML = `
@@ -70,58 +69,58 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-const myProjects = document.getElementById("my-projects");
-const popUp = document.getElementById("pop-up");
-const popupContent = document.getElementById("popup-content");
-const closePop = document.getElementById("close-pop");
-const mainContent = document.getElementById("main-content");
+const myProjects = document.getElementById('my-projects');
+const popUp = document.getElementById('pop-up');
+const popupContent = document.getElementById('popup-content');
+const closePop = document.getElementById('close-pop');
+const mainContent = document.getElementById('main-content');
 const body = document.body;
 
 const projects = [
   {
-    title: "Number Validator",
-    shortDescription: "The Telephone Number Validator is a web application that allows users to validate and format phone numbers based on the selected country. The application then displays the validation result and the formatted number.",
-    longDescription: "The Telephone Number Validator is an intuitive web application designed to validate and format phone numbers according to the standards of different countries. It provides a simple interface where users can enter a phone number into the input field and select the appropriate country code from a dropdown menu. By clicking the (Check) button, the application processes the input to validate its correctness and format it according to the selected country's phone number conventions.",
-    image: "images/telephone number validitor.jpg",
-    technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
-    liveLink: "https://walwalasafi.github.io/Telephone-Number-Validator/",
-    sourceLink: "https://github.com/WALWALASAFI/Telephone-Number-Validator",
+    title: 'Number Validator',
+    shortDescription: 'The Telephone Number Validator is a web application that allows users to validate and format phone numbers based on the selected country. The application then displays the validation result and the formatted number.',
+    longDescription: 'The Telephone Number Validator is an intuitive web application designed to validate and format phone numbers according to the standards of different countries. It provides a simple interface where users can enter a phone number into the input field and select the appropriate country code from a dropdown menu. By clicking the (Check) button, the application processes the input to validate its correctness and format it according to the selected country\'s phone number conventions.',
+    image: 'images/telephone number validitor.jpg',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Git', 'GitHub'],
+    liveLink: 'https://walwalasafi.github.io/Telephone-Number-Validator/',
+    sourceLink: 'https://github.com/WALWALASAFI/Telephone-Number-Validator',
   },
   {
-    title: "Cash Register",
-    shortDescription: "The Cash Register web application is a robust tool for managing transactions and cash flow in a retail setting. It facilitates the calculation of change and the real-time updating of the cash drawer based on the amount of cash provided by the customer.",
-    longDescription: "The Cash Register is a web application designed to calculate change and update the cash drawer based on the amount received from the customer. It features an input field for the received amount, a dropdown menu for selecting the payment method, and a button to process the transaction and display the change due. This application is designed to streamline the checkout process, ensuring accurate and efficient handling of cash transactions, reducing errors, and improving customer service.",
-    image: "images/cash register.jpg",
-    technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
-    liveLink: "https://walwalasafi.github.io/Cash-register/",
-    sourceLink: "https://github.com/WALWALASAFI/Cash-register",
+    title: 'Cash Register',
+    shortDescription: 'The Cash Register web application is a robust tool for managing transactions and cash flow in a retail setting. It facilitates the calculation of change and the real-time updating of the cash drawer based on the amount of cash provided by the customer.',
+    longDescription: 'The Cash Register is a web application designed to calculate change and update the cash drawer based on the amount received from the customer. It features an input field for the received amount, a dropdown menu for selecting the payment method, and a button to process the transaction and display the change due. This application is designed to streamline the checkout process, ensuring accurate and efficient handling of cash transactions, reducing errors, and improving customer service.',
+    image: 'images/cash register.jpg',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Git', 'GitHub'],
+    liveLink: 'https://walwalasafi.github.io/Cash-register/',
+    sourceLink: 'https://github.com/WALWALASAFI/Cash-register',
   },
   {
-    title: "Product Landing Page",
-    shortDescription: "Convenience at Your Doorstep: With online fresh fruit shopping, the bounty of the orchard is just a click away. Say goodbye to long trips to the grocery store or local market. Now, you can browse through a diverse array of fresh fruits from the comfort of your home, office, or anywhere with an internet connection.Online fresh fruit shopping brings the farm-fresh goodness of nature directly to your fingertips,🥰",
-    longDescription: "Convenience at Your Doorstep: With online fresh fruit shopping, the bounty of the orchard is just a click away. Say goodbye to long trips to the grocery store or local market. Now, you can browse through a diverse array of fresh fruits from the comfort of your home, office, or anywhere with an internet connection.Online fresh fruit shopping brings the farm-fresh goodness of nature directly to your fingertips,🥰",
-    image: "images/landing.jpg",
-    technologies: ["HTML", "CSS", "Git", "GitHub"],
-    liveLink: "https://walwalasafi.github.io/product-landing-page/",
-    sourceLink: "https://github.com/WALWALASAFI/product-landing-page",
+    title: 'Product Landing Page',
+    shortDescription: 'Convenience at Your Doorstep: With online fresh fruit shopping, the bounty of the orchard is just a click away. Say goodbye to long trips to the grocery store or local market. Now, you can browse through a diverse array of fresh fruits from the comfort of your home, office, or anywhere with an internet connection.Online fresh fruit shopping brings the farm-fresh goodness of nature directly to your fingertips,🥰',
+    longDescription: 'Convenience at Your Doorstep: With online fresh fruit shopping, the bounty of the orchard is just a click away. Say goodbye to long trips to the grocery store or local market. Now, you can browse through a diverse array of fresh fruits from the comfort of your home, office, or anywhere with an internet connection.Online fresh fruit shopping brings the farm-fresh goodness of nature directly to your fingertips,🥰',
+    image: 'images/landing.jpg',
+    technologies: ['HTML', 'CSS', 'Git', 'GitHub'],
+    liveLink: 'https://walwalasafi.github.io/product-landing-page/',
+    sourceLink: 'https://github.com/WALWALASAFI/product-landing-page',
   },
   {
-    title: "Pokémon Search App",
-    shortDescription: "The Pokémon Search App is a web application designed to allow users to search for Pokémon by their name or ID. It provides detailed information and a sprite image of the searched Pokémon.",
-    longDescription: "The Pokémon Search App is a comprehensive web application that enables users to search for Pokémon by entering either the name or ID of the Pokémon they wish to find. Upon initiating the search, the app displays an array of detailed information about the Pokémon, including its name, ID, weight, height, types, and various stats. Additionally, the app shows a sprite image of the Pokémon, giving users a visual representation. The user-friendly interface, adorned with a colorful Pokémon-themed banner, enhances the overall experience, making it easy and enjoyable to look up any Pokémon.",
-    image: "images/pic of pokemon.jpg",
-    technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub", "Spilne"],
-    liveLink: "https://walwalasafi.github.io/Pok-mon-Search-App/",
-    sourceLink: "https://github.com/WALWALASAFI/Pok-mon-Search-App",
+    title: 'Pokémon Search App',
+    shortDescription: 'The Pokémon Search App is a web application designed to allow users to search for Pokémon by their name or ID. It provides detailed information and a sprite image of the searched Pokémon.',
+    longDescription: 'The Pokémon Search App is a comprehensive web application that enables users to search for Pokémon by entering either the name or ID of the Pokémon they wish to find. Upon initiating the search, the app displays an array of detailed information about the Pokémon, including its name, ID, weight, height, types, and various stats. Additionally, the app shows a sprite image of the Pokémon, giving users a visual representation. The user-friendly interface, adorned with a colorful Pokémon-themed banner, enhances the overall experience, making it easy and enjoyable to look up any Pokémon.',
+    image: 'images/pic of pokemon.jpg',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Git', 'GitHub', 'Spilne'],
+    liveLink: 'https://walwalasafi.github.io/Pok-mon-Search-App/',
+    sourceLink: 'https://github.com/WALWALASAFI/Pok-mon-Search-App',
   },
   {
-    title: "Portfolio Project",
-    shortDescription: "This project is a portfolio website designed to showcase various web development projects. The website employs a sleek, dark-themed design with a focus on simplicity and modern aesthetics.",
-    longDescription: "This portfolio website is designed to showcase various web development projects. It features a modern, minimalist design with a dark theme, providing a sleek and professional look. The website includes a navigation bar with links to Home, About, Work, and Contact sections, allowing easy access to different parts of the site. The website is fully responsive, ensuring that it provides a seamless user experience across various devices and screen sizes.",
-    image: "images/portfolio.jpg",
-    technologies: ["HTML", "CSS", "Git", "GitHub"],
-    liveLink: "https://walwalasafi.github.io/personal-portfolio-webpage/",
-    sourceLink: "https://github.com/WALWALASAFI/personal-portfolio-webpage",
+    title: 'Portfolio Project',
+    shortDescription: 'This project is a portfolio website designed to showcase various web development projects. The website employs a sleek, dark-themed design with a focus on simplicity and modern aesthetics.',
+    longDescription: 'This portfolio website is designed to showcase various web development projects. It features a modern, minimalist design with a dark theme, providing a sleek and professional look. The website includes a navigation bar with links to Home, About, Work, and Contact sections, allowing easy access to different parts of the site. The website is fully responsive, ensuring that it provides a seamless user experience across various devices and screen sizes.',
+    image: 'images/portfolio.jpg',
+    technologies: ['HTML', 'CSS', 'Git', 'GitHub'],
+    liveLink: 'https://walwalasafi.github.io/personal-portfolio-webpage/',
+    sourceLink: 'https://github.com/WALWALASAFI/personal-portfolio-webpage',
   },
   {
     title: "Documentation Page",
@@ -235,17 +234,22 @@ window.showPopup = function (index) {
   mainContent.classList.add("blurred");
   body.classList.add("no-scroll");
 
-  document.getElementById("close-pop").addEventListener("click", () => {
+  const closePopup = () => {
     popUp.classList.add("hidden");
     mainContent.classList.remove("blurred");
     body.classList.remove("no-scroll");
-  });
-  document.getElementById("mobile-close-pop").addEventListener("click", () => {
-    popUp.classList.add("hidden");
-    mainContent.classList.remove("blurred");
-    body.classList.remove("no-scroll");
-  });
-}
+  };
+
+  const closeButton = document.getElementById("close-pop");
+  if (closeButton) {
+    closeButton.addEventListener("click", closePopup);
+  }
+
+  const mobileCloseButton = document.getElementById("mobile-close-pop");
+  if (mobileCloseButton) {
+    mobileCloseButton.addEventListener("click", closePopup);
+    }
+};
 
 document.addEventListener("DOMContentLoaded", displayProjects);
 
