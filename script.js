@@ -83,7 +83,7 @@ const projects = [
     image: 'images/telephone number validitor.jpg',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Git', 'GitHub'],
     liveLink: 'https://walwalasafi.github.io/Telephone-Number-Validator/',
-    sourceLink: 'https://github.com/WALWALASAFI/Telephone-Number-Validator'
+    sourceLink: 'https://github.com/WALWALASAFI/Telephone-Number-Validator',
   },
   {
     title: 'Cash Register',
@@ -92,7 +92,7 @@ const projects = [
     image: 'images/cash register.jpg',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Git', 'GitHub'],
     liveLink: 'https://walwalasafi.github.io/Cash-register/',
-    sourceLink: 'https://github.com/WALWALASAFI/Cash-register'
+    sourceLink: 'https://github.com/WALWALASAFI/Cash-register',
   },
   {
     title: 'Product Landing Page',
@@ -101,7 +101,7 @@ const projects = [
     image: 'images/landing.jpg',
     technologies: ['HTML', 'CSS', 'Git', 'GitHub'],
     liveLink: 'https://walwalasafi.github.io/product-landing-page/',
-    sourceLink: 'https://github.com/WALWALASAFI/product-landing-page'
+    sourceLink: 'https://github.com/WALWALASAFI/product-landing-page',
   },
   {
     title: 'Pokémon Search App',
@@ -110,7 +110,7 @@ const projects = [
     image: 'images/pic of pokemon.jpg',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Git', 'GitHub', 'Spilne'],
     liveLink: 'https://walwalasafi.github.io/Pok-mon-Search-App/',
-    sourceLink: 'https://github.com/WALWALASAFI/Pok-mon-Search-App'
+    sourceLink: 'https://github.com/WALWALASAFI/Pok-mon-Search-App',
   },
   {
     title: 'Portfolio Project',
@@ -119,7 +119,7 @@ const projects = [
     image: 'images/portfolio.jpg',
     technologies: ['HTML', 'CSS', 'Git', 'GitHub'],
     liveLink: 'https://walwalasafi.github.io/personal-portfolio-webpage/',
-    sourceLink: 'https://github.com/WALWALASAFI/personal-portfolio-webpage'
+    sourceLink: 'https://github.com/WALWALASAFI/personal-portfolio-webpage',
   },
   {
     title: 'Documentation Page',
@@ -128,65 +128,60 @@ const projects = [
     image: 'images/technical documention page.jpg',
     technologies: ['HTML', 'CSS', 'Git', 'GitHub'],
     liveLink: 'https://walwalasafi.github.io/technical_documentation_page/',
-    sourceLink: 'https://github.com/WALWALASAFI/technical_documentation_page'
+    sourceLink: 'https://github.com/WALWALASAFI/technical_documentation_page',
   },
-	{
-		sourceLink: 'https://github.com/WALWALASAFI/Palindrome-checker-project'
-		},
-		{
-			title: 'Survey Form',
-			shortDescription: 'This is a student survey form with fields for school name, student name, last name, date, email, and optional choices.',
-			longDescription: 'This is a student survey form with fields for school name, student name, last name, date, email, and optional choices.',
-			image: 'images/survey.jpg',
-			technologies: ['HTML', 'CSS', 'Git', 'GitHub'],
-			liveLink: 'https://walwalasafi.github.io/survey-form/',
-			sourceLink: 'https://github.com/WALWALASAFI/survey-form'
-		},
-		{
-			title: 'Roman Number Converter',
-			shortDescription: 'The Roman Number Converter is a web application that allows users to convert Arabic numbers to Roman numerals. It provides an intuitive interface where users can enter a number and receive its Roman numeral equivalent.',
-			longDescription: 'The Roman Number Converter is a web application designed to convert Arabic numbers into Roman numerals. The application provides a user-friendly interface where users can enter any Arabic number within the accepted range and immediately receive its Roman numeral equivalent. This tool is useful for educational purposes, historical research, or any situation requiring the conversion of numerical data into Roman numerals. With its straightforward design and efficient functionality, the Roman Number Converter offers a seamless user experience, ensuring accurate and reliable results with every use.',
-			image: 'images/roman numerial convertot.jpg',
-			technologies: ['HTML', 'CSS', 'JavaScript', 'Git', 'GitHub'],
-			liveLink: 'https://walwalasafi.github.io/Roman-Number-Converter/',
-			sourceLink: 'https://github.com/WALWALASAFI/Roman-Number-Converter'
-		},
-		{
-			title: 'ODIN Project',
-			shortDescription: 'This is my first project that has a simple design with just one header and paragraph, also has a simple style according to the paragraph and the title.',
-			longDescription: 'This is my first project that has a simple design with just one header and paragraph, also has a simple style according to the paragraph and the title.',
-			image: 'images/odin screenshot.jpg',
-			technologies: ['HTML', 'CSS', 'GitHub'],
-			liveLink: 'https://walwalasafi.github.io/odin-project/',
-			sourceLink: 'https://github.com/WALWALASAFI/odin-project'
-		}
-	];
-	
+  {
+    title: 'Survey Form',
+    shortDescription: 'This is a student survey form with fields for school name, student name, last name, date, email, and optional choices.',
+    longDescription: 'This is a student survey form with fields for school name, student name, last name, date, email, and optional choices.',
+    image: 'images/survey.jpg',
+    technologies: ['HTML', 'CSS', 'Git', 'GitHub'],
+    liveLink: 'https://walwalasafi.github.io/survey-form/',
+    sourceLink: 'https://github.com/WALWALASAFI/survey-form',
+  },
+  {
+    title: 'Roman Number Converter',
+    shortDescription: 'The Roman Number Converter is a web application that allows users to convert Arabic numbers to Roman numerals. It provides an intuitive interface where users can enter a number and receive its Roman numeral equivalent.',
+    longDescription: 'The Roman Number Converter is a web application designed to convert Arabic numbers into Roman numerals. The application provides a user-friendly interface where users can enter any Arabic number within the accepted range and immediately receive its Roman numeral equivalent. This tool is useful for educational purposes, historical research, or any situation requiring the conversion of numerical data into Roman numerals. With its straightforward design and efficient functionality, the Roman Number Converter offers a seamless user experience, ensuring accurate and reliable results with every use.',
+    image: 'images/roman numerial convertot.jpg',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Git', 'GitHub'],
+    liveLink: 'https://walwalasafi.github.io/Roman-Number-Converter/',
+    sourceLink: 'https://github.com/WALWALASAFI/Roman-Number-Converter',
+  },
+  {
+    title: 'ODIN Project',
+    shortDescription: 'This is my first project that has a simple design with just one header and paragraph, also has a simple style according to the paragraph and the title.',
+    longDescription: 'This is my first project that has a simple design with just one header and paragraph, also has a simple style according to the paragraph and the title.',
+    image: 'images/odin screenshot.jpg',
+    technologies: ['HTML', 'CSS', 'GitHub'],
+    liveLink: 'https://walwalasafi.github.io/odin-project/',
+    sourceLink: 'https://github.com/WALWALASAFI/odin-project',
+  },
+];
+
 function displayProjects() {
   myProjects.innerHTML = projects
-    .map(
-      (project, index) => `
-    <div class="proj" id="proj-${index}">
-      <h3>${project.title}</h3>
-      <img src="${project.image}" alt="${project.title}" />
-      <p id="desc">${project.shortDescription}</p>
-      <button class="popup-button-more" onclick="showPopup(${index})">Learn More</button>
-    </div>
-    `
-    )
+    .map((project, index) => `
+      <div class="proj" id="proj-${index}">
+        <h3>${project.title}</h3>
+        <img src="${project.image}" alt="${project.title}" />
+        <p id="desc">${project.shortDescription}</p>
+        <button class="popup-button-more" onclick="showPopup(${index})">Learn More</button>
+      </div>
+    `)
     .join(''); // Removed unnecessary space
 
   let currentItems = 2;
   const boxes = document.querySelectorAll('.proj');
 
   boxes.forEach((box, index) => {
-		if (index < currentItems) {
-			box.style.display = 'block';
-		}
-	});
-	
-	const showMoreProjectsBtn = document.getElementById('show-more-projects'); // Added definition
-	
+    if (index < currentItems) {
+      box.style.display = 'block';
+    }
+  });
+
+  const showMoreProjectsBtn = document.getElementById('show-more-projects'); // Added definition
+
 	showMoreProjectsBtn.onclick = () => {
 		if (showMoreProjectsBtn.innerText === 'Show More') { // Corrected quotes
 			for (let i = currentItems; i < currentItems + 2; i++) { // Changed '++' to '+1'

@@ -1,13 +1,21 @@
 Walwala Safi's Portfolio
+
+
 Demo 📸
 ![image](images/SharedScreenshot.jpg)
+
+
 
 Welcome to Walwala Safi's portfolio! I am a passionate and dedicated web developer with expertise in crafting visually engaging and highly functional websites. My portfolio showcases a range of projects that demonstrate my proficiency in HTML, CSS, JavaScript, and responsive design.
 
 Projects Highlight:
 
 ◻ Palindrome Checker: An intuitive web application that checks if a given text is a palindrome, with a focus on clean design and usability.
+
+
 ◻ Survey Form: A straightforward student survey form with fields for various data, featuring clear and effective styling.
+
+
 ◻ Roman Number Converter: A tool for converting Arabic numbers to Roman numerals, designed with a user-friendly interface for accurate conversions.
 
 
@@ -19,18 +27,29 @@ Dimo link
 
 
 Technologies Used 🛠️
+
+
 🔹HTML
 🔹CSS
 🔹java script
 
 Contribution
 
+
+
 ◻ Hadisa Zahirzai.
+
+
 ◻ Zabeena Sherzoie.
+
+
 ◻ Safia Iqbal.
 
 
+
 Contributing
+
+
 We welcome contributions to improve the Roman Number Converter. If you have ideas for enhancements, notice any issues, or want to work on this project, please follow these steps:
 
 Fork the repository.
@@ -40,6 +59,8 @@ Push to the branch: git push origin feature-name
 Create a pull request
 
 Rquirements# 
+
+
 
 1️⃣creat a new repository in your github
 
