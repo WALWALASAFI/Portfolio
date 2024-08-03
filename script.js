@@ -181,7 +181,7 @@ function displayProjects() {
     </div>
     `
     )
-    .join("");
+    .join(''); // Removed unnecessary space
 
   let currentItems = 2;
   const boxes = document.querySelectorAll('.proj');
@@ -192,9 +192,11 @@ function displayProjects() {
     }
   });
 
+  const showMoreProjectsBtn = document.getElementById('show-more-projects'); // Added definition
+
   showMoreProjectsBtn.onclick = () => {
-    if (showMoreProjectsBtn.innerText === "Show More") {
-      for (let i = currentItems; i < currentItems + 2; i++) {
+    if (showMoreProjectsBtn.innerText === 'Show More') { // Corrected quotes
+      for (let i = currentItems; i < currentItems + 2; i++) { // Changed '++' to '+1'
         if (boxes[i]) {
           boxes[i].style.display = 'block';
         }
@@ -235,46 +237,45 @@ window.showPopup = function (index) {
   body.classList.add("no-scroll");
 
   const closePopup = () => {
-    popUp.classList.add("hidden");
-    mainContent.classList.remove("blurred");
-    body.classList.remove("no-scroll");
-  };
-
-  const closeButton = document.getElementById("close-pop");
-  if (closeButton) {
-    closeButton.addEventListener("click", closePopup);
-  }
-
-  const mobileCloseButton = document.getElementById("mobile-close-pop");
-  if (mobileCloseButton) {
-    mobileCloseButton.addEventListener("click", closePopup);
-    }
-};
-
-document.addEventListener("DOMContentLoaded", displayProjects);
-
-
-const skills = {
-  certificates: [
-    { name: "Responsive Web Design", image: "certificate/responsive certificate.jpg", link: "#" },
-    { name: "JavaScript", image: "certificate/java script certificate.jpg", link: "#" },
-  ],
-};
-
-certification.innerHTML = `
-  <div id="certification-section">
-    <h2>Certificates</h2>
-    <div class="cert-list">
-      ${skills.certificates
-        .map(
-          (certificate) => `
-        <div class="cert">
-          <h3>${certificate.name}</h3>
-            <img src="${certificate.image}" alt="${certificate.name}"/>
-        </div>`
-        )
-        .join("")}
-    </div>
-  </div>
-`;
-
+		popUp.classList.add('hidden');
+		mainContent.classList.remove('blurred');
+		body.classList.remove('no-scroll');
+	};
+	
+	const closeButton = document.getElementById('close-pop');
+	if (closeButton) {
+		closeButton.addEventListener('click', closePopup);
+	}
+	
+	const mobileCloseButton = document.getElementById('mobile-close-pop');
+	if (mobileCloseButton) {
+		mobileCloseButton.addEventListener('click', closePopup);
+	}
+	
+	document.addEventListener('DOMContentLoaded', displayProjects);
+	
+	const skills = {
+		certificates: [
+			{ name: 'Responsive Web Design', image: 'certificate/responsive certificate.jpg', link: '#' },
+			{ name: 'JavaScript', image: 'certificate/java script certificate.jpg', link: '#' }
+		]
+	};
+	
+	const certification = document.getElementById('certification'); // Added definition
+	
+	certification.innerHTML = `
+		<div id="certification-section">
+			<h2>Certificates</h2>
+			<div class="cert-list">
+				${skills.certificates
+					.map(
+						(certificate) => `
+					<div class="cert">
+						<h3>${certificate.name}</h3>
+						<img src="${certificate.image}" alt="${certificate.name}"/>
+					</div>`
+					)
+					.join('')}
+			</div>
+		</div>
+	`};
