@@ -1,9 +1,21 @@
-Walwala Safi 
-
-
-
+Walwala Safi's Portfolio
 Demo 📸
 ![image](images/SharedScreenshot.jpg)
+
+Welcome to Walwala Safi's portfolio! I am a passionate and dedicated web developer with expertise in crafting visually engaging and highly functional websites. My portfolio showcases a range of projects that demonstrate my proficiency in HTML, CSS, JavaScript, and responsive design.
+
+Projects Highlight:
+
+◻ Palindrome Checker: An intuitive web application that checks if a given text is a palindrome, with a focus on clean design and usability.
+◻ Survey Form: A straightforward student survey form with fields for various data, featuring clear and effective styling.
+◻ Roman Number Converter: A tool for converting Arabic numbers to Roman numerals, designed with a user-friendly interface for accurate conversions.
+
+
+Explore my work to see how I combine technical skills with creative design to build effective web solutions. Feel free to reach out if you have any questions or opportunities for collaboration.
+
+
+Dimo link 
+
 
 
 Technologies Used 🛠️
@@ -11,7 +23,21 @@ Technologies Used 🛠️
 🔹CSS
 🔹java script
 
+Contribution
 
+◻ Hadisa Zahirzai.
+◻ Zabeena Sherzoie.
+◻ Safia Iqbal.
+
+
+Contributing
+We welcome contributions to improve the Roman Number Converter. If you have ideas for enhancements, notice any issues, or want to work on this project, please follow these steps:
+
+Fork the repository.
+Create a new branch: git checkout -b feature-name
+Make your changes and commit them: git commit -m "Description of changes"
+Push to the branch: git push origin feature-name
+Create a pull request
 
 Rquirements# 
 
@@ -36,7 +62,9 @@ Open your terminal or command prompt. Navigate to the directory where you want t
 
 Author 🔵✅
 ◻ Github: WALWALA SAFI (https://github.com/WALWALASAFI/product-landing-page.git)
+
 ◻ Linkedin:  walwala safi (https://www.linkedin.com/in/walwala-safi-65b56530a/)
+
 ◻ Email: walwala safi (walwalasafi99@gmail.com)
 
 
