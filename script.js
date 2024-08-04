@@ -161,7 +161,7 @@ function displayProjects() {
   const popupContent = document.getElementById('popup-content');
   const popUp = document.getElementById('popup');
   const mainContent = document.getElementById('main-content');
-  const body = document.body;
+  const { body } = document;
 
   if (!myProjects) return;
 
@@ -204,7 +204,8 @@ function displayProjects() {
     };
   }
 
-  window.showPopup = function (index) {
+  window.showPopup = function showPopup(index) {
+    // function body
     const project = projects[index];
     popupContent.innerHTML = `
       <button id="close-pop" class="close-btn">&times;</button>
@@ -250,9 +251,9 @@ const skills = {
 const certification = document.getElementById('certification'); // Added definition
 
 const skill = {
-  TechnicalSkills: ["HTML", "CSS", "JS", "Java", "Git", "Web Performance"],
-  professionalSkills: ["Problem Solving", "Project Management", "Communication", "Critical Thinking", "Time Management", "Creativity"],
-  softSkills: ["Skills Matrix", "Teamwork", "Testimonials", "Clean Code", "Case Studies"],
+  TechnicalSkills: ['HTML', 'CSS', 'JS', 'Java', 'Git', 'Web Performance'],
+  professionalSkills: ['Problem Solving', 'Project Management', 'Communication', 'Critical Thinking',],
+  softSkills: ['Skills Matrix', 'Teamwork', 'Testimonials', 'Clean Code', ],
 };
 
 const skillsContainer = document.getElementById('skills');
@@ -281,62 +282,62 @@ if (skillsContainer) {
         </div>
       </div>
     </div>
-  `;
+  `};
 
   // Append list items to respective lists
   const technicalSkillsList = document.getElementById('Technical-Skills-list');
   const professionalSkillsList = document.getElementById('professional-skills-list');
   const softSkillsList = document.getElementById('soft-skills-list');
 
-  skill.TechnicalSkills.forEach(techSkill => {
+  skill.TechnicalSkills.forEach((techSkill) => {
     const listItem = document.createElement('li');
     listItem.textContent = techSkill;
     technicalSkillsList.appendChild(listItem);
   });
-
-  skill.professionalSkills.forEach(proSkill => {
+  
+  skill.professionalSkills.forEach((proSkill) => {
     const listItem = document.createElement('li');
     listItem.textContent = proSkill;
     professionalSkillsList.appendChild(listItem);
   });
-
-  skill.softSkills.forEach(softSkill => {
+  
+  skill.softSkills.forEach((softSkill) => {
     const listItem = document.createElement('li');
     listItem.textContent = softSkill;
     softSkillsList.appendChild(listItem);
   });
-
+  
   // Add click event to toggle visibility of lists
-  document.querySelectorAll('.skills-header').forEach(header => {
+  document.querySelectorAll('.skills-header').forEach((header) => {
     header.addEventListener('click', () => {
       const targetList = document.querySelector(header.dataset.target);
-
+  
       if (targetList.classList.contains('visible')) {
         targetList.classList.remove('visible');
       } else {
-        document.querySelectorAll('.skills-list.visible').forEach(list => {
+        document.querySelectorAll('.skills-list.visible').forEach((list) => {
           list.classList.remove('visible');
         });
         targetList.classList.add('visible');
       }
     });
   });
-}
-
-if (certification) {
-  certification.innerHTML = `
-    <div id="certification-section">
-      <h2>Certificates</h2>
-      <div class="cert-list">
-        ${skills.certificates
-          .map(certificate => `
-            <div class="cert">
-              <h3>${certificate.name}</h3>
-              <img src="${certificate.image}" alt="${certificate.name}" />
-            </div>
-          `)
-          .join('')}
+  
+  if (certification) {
+    certification.innerHTML = `
+      <div id="certification-section">
+        <h2>Certificates</h2>
+        <div class="cert-list">
+          ${skills.certificates
+            .map((certificate) => `
+              <div class="cert">
+                <h3>${certificate.name}</h3>
+                <img src="${certificate.image}" alt="${certificate.name}" />
+              </div>
+            `)
+            .join('')}
+        </div>
       </div>
-    </div>
-  `;
-}
+    `;
+  }
+  
