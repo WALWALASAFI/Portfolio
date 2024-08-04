@@ -1,14 +1,16 @@
 // Function to show the sidebar
-function showSidebar() {
-  const sidebar = document.querySelector('.sidebar');
-  sidebar.style.display = 'flex';
-}
+// Commented out as it's not used in the current code
+// function showSidebar() {
+//   const sidebar = document.querySelector('.sidebar');
+//   sidebar.style.display = 'flex';
+// }
 
 // Function to hide the sidebar
-function hideSidebar() {
-  const sidebar = document.querySelector('.sidebar');
-  sidebar.style.display = 'none';
-}
+// Commented out as it's not used in the current code
+// function hideSidebar() {
+//   const sidebar = document.querySelector('.sidebar');
+//   sidebar.style.display = 'none';
+// }
 
 document.addEventListener('DOMContentLoaded', () => {
   const heroText = document.querySelector('.hero-text');
