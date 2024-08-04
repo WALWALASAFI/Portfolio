@@ -71,12 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-const myProjects = document.getElementById('my-projects');
-const popUp = document.getElementById('pop-up');
-const popupContent = document.getElementById('popup-content');
-const mainContent = document.getElementById('main-content');
-const body = document.body;
-
 const projects = [
   {
     title: 'Number Validator',
@@ -162,113 +156,180 @@ const projects = [
 ];
 
 function displayProjects() {
+  const myProjects = document.getElementById('my-projects');
+  const showMoreProjectsBtn = document.getElementById('show-more-projects');
+  const popupContent = document.getElementById('popup-content');
+  const popUp = document.getElementById('popup');
+  const mainContent = document.getElementById('main-content');
+  const body = document.body;
+
+  if (!myProjects || !popupContent || !popUp || !mainContent || !body) return;
+
   myProjects.innerHTML = projects
     .map((project, index) => `
       <div class="proj" id="proj-${index}">
         <h3>${project.title}</h3>
         <img src="${project.image}" alt="${project.title}" />
-        <p id="desc">${project.shortDescription}</p>
+        <p>${project.shortDescription}</p>
         <button class="popup-button-more" onclick="showPopup(${index})">Learn More</button>
       </div>
     `)
-    .join(''); // Removed unnecessary space
+    .join('');
 
   let currentItems = 2;
   const boxes = document.querySelectorAll('.proj');
 
-  boxes.forEach((box, index) => {
-    if (index < currentItems) {
-      box.style.display = 'block';
-    }
+  function showProjects(count) {
+    boxes.forEach((box, index) => {
+      box.style.display = index < count ? 'block' : 'none';
+    });
+  }
+
+  showProjects(currentItems);
+
+  if (showMoreProjectsBtn) {
+    showMoreProjectsBtn.onclick = () => {
+      if (showMoreProjectsBtn.innerText === 'Show More') {
+        currentItems += 2;
+        showProjects(currentItems);
+        if (currentItems >= boxes.length) {
+          showMoreProjectsBtn.innerText = 'Show Less';
+        }
+      } else {
+        currentItems = 2;
+        showProjects(currentItems);
+        showMoreProjectsBtn.innerText = 'Show More';
+        document.getElementById('project').scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+  }
+
+  window.showPopup = function (index) {
+    const project = projects[index];
+    popupContent.innerHTML = `
+      <button id="close-pop" class="close-btn">&times;</button>
+      <h3>${project.title}</h3>
+      <img src="${project.image}" alt="${project.title}" />
+      <p>${project.longDescription}</p>
+      <p>Technologies: ${project.technologies.join(', ')}</p>
+      <a class="popup-button" href="${project.liveLink}" target="_blank">Live Site</a>
+      <a class="popup-button" href="${project.sourceLink}" target="_blank">GitHub Repository</a>
+      <button id="mobile-close-pop" class="close-btn-mobile">Close</button>
+    `;
+    popUp.classList.remove('hidden');
+    mainContent.classList.add('blurred');
+    body.classList.add('no-scroll');
+
+    const closePopup = () => {
+      popUp.classList.add('hidden');
+      mainContent.classList.remove('blurred');
+      body.classList.remove('no-scroll');
+    };
+
+    document.getElementById('close-pop')?.addEventListener('click', closePopup);
+    document.getElementById('mobile-close-pop')?.addEventListener('click', closePopup);
+  };
+}
+
+document.addEventListener('DOMContentLoaded', displayProjects);
+
+const skills = {
+  certificates: [
+    { name: 'Responsive Web Design', image: 'certificate/responsive certificate.jpg', link: '#' },
+    { name: 'JavaScript', image: 'certificate/java script certificate.jpg', link: '#' },
+  ],
+};
+
+const certification = document.getElementById('certification'); // Added definition
+
+const skill = {
+  TechnicalSkills: ["HTML", "CSS", "JS", "Java", "Git", "Web Performance"],
+  professionalSkills: ["Problem Solving", "Project Management", "Communication", "Critical Thinking", "Time Management", "Creativity"],
+  softSkills: ["Skills Matrix", "Teamwork", "Testimonials", "Clean Code", "Case Studies"],
+};
+
+const skillsContainer = document.getElementById('skills');
+
+if (skillsContainer) {
+  skillsContainer.innerHTML = `
+    <h2>Skills</h2>
+    <div id="skills-content">
+      <div class="list">
+        <div class="skills-category">
+          <h3 class="skills-header" data-target="#Technical-Skills-list">Technical Skills</h3>
+          <ul class="skills-list" id="Technical-Skills-list"></ul>
+        </div>
+        <div class="skills-category">
+          <h3 class="skills-header" data-target="#professional-skills-list">Professional Skills</h3>
+          <ul class="skills-list" id="professional-skills-list"></ul>
+        </div>
+        <div class="skills-category">
+          <h3 class="skills-header" data-target="#soft-skills-list">Soft Skills</h3>
+          <ul class="skills-list" id="soft-skills-list"></ul>
+        </div>
+      </div>
+      <div class="image">
+        <div id="skills-image">
+          <img src="images/images.jpg">
+        </div>
+      </div>
+    </div>
+  `;
+
+  // Append list items to respective lists
+  const technicalSkillsList = document.getElementById('Technical-Skills-list');
+  const professionalSkillsList = document.getElementById('professional-skills-list');
+  const softSkillsList = document.getElementById('soft-skills-list');
+
+  skill.TechnicalSkills.forEach(techSkill => {
+    const listItem = document.createElement('li');
+    listItem.textContent = techSkill;
+    technicalSkillsList.appendChild(listItem);
   });
 
-  const showMoreProjectsBtn = document.getElementById('show-more-projects'); // Added definition
+  skill.professionalSkills.forEach(proSkill => {
+    const listItem = document.createElement('li');
+    listItem.textContent = proSkill;
+    professionalSkillsList.appendChild(listItem);
+  });
 
-	showMoreProjectsBtn.onclick = () => {
-		if (showMoreProjectsBtn.innerText === 'Show More') { // Corrected quotes
-			for (let i = currentItems; i < currentItems + 2; i++) { // Changed '++' to '+1'
-				if (boxes[i]) {
-					boxes[i].style.display = 'block';
-				}
-			}
-			currentItems += 2;
-			if (currentItems >= boxes.length) {
-				showMoreProjectsBtn.innerText = 'Show Less';
-			}
-		} else {
-			currentItems = 2;
-			boxes.forEach((box, index) => {
-				if (index >= currentItems) {
-					box.style.display = 'none';
-				}
-			});
-			showMoreProjectsBtn.innerText = 'Show More';
-			document.getElementById('project').scrollIntoView({ behavior: 'smooth' });
-		}
-		
-		// Fixed the undefined variable 'btnText'
-		console.log('Updated button text:', showMoreProjectsBtn.innerText);
-		console.log('SVG class list:', showMoreProjectsBtn.classList);
-	};
-	
-	window.showPopup = function (index) {
-		const project = projects[index];
-		popupContent.innerHTML = `
-			<button id="close-pop" class="close-btn">&times;</button>
-			<h3>${project.title}</h3>
-			<img src="${project.image}" alt="${project.title}" />
-			<p>${project.longDescription}</p>
-			<p>Technologies: ${project.technologies.join(', ')}</p>
-			<a class="popup-button" id="live" href="${project.liveLink}" target="_blank">Live Site</a>
-			<a class="popup-button" id="git" href="${project.sourceLink}" target="_blank">GitHub Repository</a>
-			<button id="mobile-close-pop" class="close-btn-mobile">Close</button>
-		`;
-		popUp.classList.remove('hidden');
-		mainContent.classList.add('blurred');
-		body.classList.add('no-scroll');
-	
-		const closePopup = () => {
-			popUp.classList.add('hidden');
-			mainContent.classList.remove('blurred');
-			body.classList.remove('no-scroll');
-		};
-		
-		const closeButton = document.getElementById('close-pop');
-		if (closeButton) {
-			closeButton.addEventListener('click', closePopup);
-		}
-		
-		const mobileCloseButton = document.getElementById('mobile-close-pop');
-		if (mobileCloseButton) {
-			mobileCloseButton.addEventListener('click', closePopup);
-		}
-	};
-	
-	document.addEventListener('DOMContentLoaded', displayProjects);
+  skill.softSkills.forEach(softSkill => {
+    const listItem = document.createElement('li');
+    listItem.textContent = softSkill;
+    softSkillsList.appendChild(listItem);
+  });
 
-	const skills = {
-		certificates: [
-			{ name: 'Responsive Web Design', image: 'certificate/responsive certificate.jpg', link: '#' },
-			{ name: 'JavaScript', image: 'certificate/java script certificate.jpg', link: '#' },
-		],
-	};
-	
-	const certification = document.getElementById('certification'); // Added definition
-	
-	certification.innerHTML = `
-		<div id="certification-section">
-			<h2>Certificates</h2>
-			<div class="cert-list">
-				${skills.certificates
-					.map(
-						(certificate) => `
-						<div class="cert">
-							<h3>${certificate.name}</h3>
-							<img src="${certificate.image}" alt="${certificate.name}" />
-						</div>`
-					)
-					.join('')}
-			</div>
-		</div>
-	`};
-	
+  // Add click event to toggle visibility of lists
+  document.querySelectorAll('.skills-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const targetList = document.querySelector(header.dataset.target);
+
+      if (targetList.classList.contains('visible')) {
+        targetList.classList.remove('visible');
+      } else {
+        document.querySelectorAll('.skills-list.visible').forEach(list => {
+          list.classList.remove('visible');
+        });
+        targetList.classList.add('visible');
+      }
+    });
+  });
+}
+
+if (certification) {
+  certification.innerHTML = `
+    <div id="certification-section">
+      <h2>Certificates</h2>
+      <div class="cert-list">
+        ${skills.certificates
+          .map(certificate => `
+            <div class="cert">
+              <h3>${certificate.name}</h3>
+              <img src="${certificate.image}" alt="${certificate.name}" />
+            </div>
+          `)
+          .join('')}
+      </div>
+    </div>
+  `;
+}
