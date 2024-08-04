@@ -248,12 +248,12 @@ const skills = {
   ],
 };
 
-const certification = document.getElementById('certification'); // Added definition
+const certifications = document.getElementById('certification'); // Added definition
 
 const skill = {
   TechnicalSkills: ['HTML', 'CSS', 'JS', 'Java', 'Git', 'Web Performance'],
-  professionalSkills: ['Problem Solving', 'Project Management', 'Communication', 'Critical Thinking',],
-  softSkills: ['Skills Matrix', 'Teamwork', 'Testimonials', 'Clean Code', ],
+  professionalSkills: ['Problem Solving', 'Project Management', 'Communication', 'Critical Thinking'],
+  softSkills: ['Skills Matrix', 'Teamwork', 'Testimonials', 'Clean Code'],
 };
 
 const skillsContainer = document.getElementById('skills');
@@ -278,66 +278,68 @@ if (skillsContainer) {
       </div>
       <div class="image">
         <div id="skills-image">
-          <img src="images/images.jpg">
+          <img src="images/images.jpg" alt="Skills Image">
         </div>
       </div>
     </div>
-  `};
+  `;
+}
 
-  // Append list items to respective lists
-  const technicalSkillsList = document.getElementById('Technical-Skills-list');
-  const professionalSkillsList = document.getElementById('professional-skills-list');
-  const softSkillsList = document.getElementById('soft-skills-list');
+// Append list items to respective lists
+const technicalSkillsList = document.getElementById('Technical-Skills-list');
+const professionalSkillsList = document.getElementById('professional-skills-list');
+const softSkillsList = document.getElementById('soft-skills-list');
 
-  skill.TechnicalSkills.forEach((techSkill) => {
-    const listItem = document.createElement('li');
-    listItem.textContent = techSkill;
-    technicalSkillsList.appendChild(listItem);
+skill.TechnicalSkills.forEach((techSkill) => {
+  const listItem = document.createElement('li');
+  listItem.textContent = techSkill;
+  technicalSkillsList.appendChild(listItem);
+});
+
+skill.professionalSkills.forEach((proSkill) => {
+  const listItem = document.createElement('li');
+  listItem.textContent = proSkill;
+  professionalSkillsList.appendChild(listItem);
+});
+
+skill.softSkills.forEach((softSkill) => {
+  const listItem = document.createElement('li');
+  listItem.textContent = softSkill;
+  softSkillsList.appendChild(listItem);
+});
+
+// Add click event to toggle visibility of lists
+document.querySelectorAll('.skills-header').forEach((header) => {
+  header.addEventListener('click', () => {
+    const targetList = document.querySelector(header.dataset.target);
+
+    if (targetList.classList.contains('visible')) {
+      targetList.classList.remove('visible');
+    } else {
+      document.querySelectorAll('.skills-list.visible').forEach((list) => {
+        list.classList.remove('visible');
+      });
+      targetList.classList.add('visible');
+    }
   });
-  
-  skill.professionalSkills.forEach((proSkill) => {
-    const listItem = document.createElement('li');
-    listItem.textContent = proSkill;
-    professionalSkillsList.appendChild(listItem);
-  });
-  
-  skill.softSkills.forEach((softSkill) => {
-    const listItem = document.createElement('li');
-    listItem.textContent = softSkill;
-    softSkillsList.appendChild(listItem);
-  });
-  
-  // Add click event to toggle visibility of lists
-  document.querySelectorAll('.skills-header').forEach((header) => {
-    header.addEventListener('click', () => {
-      const targetList = document.querySelector(header.dataset.target);
-  
-      if (targetList.classList.contains('visible')) {
-        targetList.classList.remove('visible');
-      } else {
-        document.querySelectorAll('.skills-list.visible').forEach((list) => {
-          list.classList.remove('visible');
-        });
-        targetList.classList.add('visible');
-      }
-    });
-  });
-  
-  if (certification) {
-    certification.innerHTML = `
-      <div id="certification-section">
-        <h2>Certificates</h2>
-        <div class="cert-list">
-          ${skills.certificates
-            .map((certificate) => `
-              <div class="cert">
-                <h3>${certificate.name}</h3>
-                <img src="${certificate.image}" alt="${certificate.name}" />
-              </div>
-            `)
-            .join('')}
-        </div>
+});
+
+const certification = document.getElementById('certification');
+
+if (certification) {
+  certification.innerHTML = `
+    <div id="certification-section">
+      <h2>Certificates</h2>
+      <div class="cert-list">
+        ${skills.certificates
+          .map((certificate) => `
+            <div class="cert">
+              <h3>${certificate.name}</h3>
+              <img src="${certificate.image}" alt="${certificate.name}" />
+            </div>
+          `)
+          .join('')}
       </div>
-    `;
-  }
-  
+    </div>
+  `;
+}
