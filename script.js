@@ -156,80 +156,87 @@ const projects = [
 ];
 
 function displayProjects() {
-const mainContent = document.getElementById('main-content');
-const body = document.body;
-const showMoreProjectsBtn = document.getElementById('show-more-projects-btn');
-const popupContent = document.getElementById('popup-content');
-const popUp = document.getElementById('popup');
-const myProjects = document.getElementById('my-projects');
-}
+  const myProjects = document.getElementById('my-projects');
+  const showMoreProjectsBtn = document.getElementById('show-more-projects');
+  const popupContent = document.getElementById('popup-content');
+  const popUp = document.getElementById('popup');
+  const mainContent = document.getElementById('main-content');
+  const body = document.body;
 
-if (!myProjects || !popupContent || !popUp || !mainContent || !body) return;
+  if (!myProjects) return;
 
-myProjects.innerHTML = projects
-  .map((project, index) => `
-    <div class='proj' id='proj-${index}'>
-      <h3>${project.title}</h3>
-      <img src='${project.image}' alt='${project.title}' />
-      <p>${project.shortDescription}</p>
-      <button class='popup-button-more' onclick='showPopup(${index})'>Learn More</button>
-    </div>
-  `)
-  .join('');
+  myProjects.innerHTML = projects
+    .map((project, index) => `
+      <div class="proj" id="proj-${index}">
+        <h3>${project.title}</h3>
+        <img src="${project.image}" alt="${project.title}" />
+        <p>${project.shortDescription}</p>
+        <button class="popup-button-more" onclick="showPopup(${index})">Learn More</button>
+      </div>
+    `)
+    .join('');
 
-let currentItems = 2;
-const boxes = document.querySelectorAll('.proj');
+  const boxes = document.querySelectorAll('.proj');
+  let currentItems = 2;
 
-function showProjects(count) {
-  boxes.forEach((box, index) => {
-    box.style.display = index < count ? 'block' : 'none';
-  });
-}
+  function showProjects(count) {
+    boxes.forEach((box, index) => {
+      box.style.display = (index < count) ? 'block' : 'none';
+    });
+  }
 
-showProjects(currentItems);
+  showProjects(currentItems);
 
-if (showMoreProjectsBtn) {
-  showMoreProjectsBtn.onclick = function handleShowMoreProjects() {
-    if (showMoreProjectsBtn.innerText === 'Show More') {
-      currentItems += 2;
-      showProjects(currentItems);
-      if (currentItems >= boxes.length) {
-        showMoreProjectsBtn.innerText = 'Show Less';
+  if (showMoreProjectsBtn) {
+    showMoreProjectsBtn.onclick = () => {
+      if (showMoreProjectsBtn.innerText === 'Show More') {
+        currentItems += 2;
+        showProjects(currentItems);
+        if (currentItems >= boxes.length) {
+          showMoreProjectsBtn.innerText = 'Show Less';
+        }
+      } else {
+        currentItems = 2;
+        showProjects(currentItems);
+        showMoreProjectsBtn.innerText = 'Show More';
+        document.getElementById('project').scrollIntoView({ behavior: 'smooth' });
       }
-    } else {
-      currentItems = 2;
-      showProjects(currentItems);
-      showMoreProjectsBtn.innerText = 'Show More';
-      document.getElementById('project').scrollIntoView({ behavior: 'smooth' });
+    };
+  }
+
+  window.showPopup = function (index) {
+    const project = projects[index];
+    popupContent.innerHTML = `
+      <button id="close-pop" class="close-btn">&times;</button>
+      <h3>${project.title}</h3>
+      <img src="${project.image}" alt="${project.title}" />
+      <p>${project.longDescription}</p>
+      <p>Technologies: ${project.technologies.join(', ')}</p>
+      <a class="popup-button" id="live" href="${project.liveLink}" target="_blank">Live Site</a>
+      <a class="popup-button" id="git" href="${project.sourceLink}" target="_blank">GitHub Repository</a>
+      <button id="mobile-close-pop" class="close-btn-mobile">Close</button>
+    `;
+    popUp.classList.remove('hidden');
+    mainContent.classList.add('blurred');
+    body.classList.add('no-scroll');
+
+    const closePopup = () => {
+      popUp.classList.add('hidden');
+      mainContent.classList.remove('blurred');
+      body.classList.remove('no-scroll');
+    };
+
+    const closeButton = document.getElementById('close-pop');
+    if (closeButton) {
+      closeButton.addEventListener('click', closePopup);
+    }
+
+    const mobileCloseButton = document.getElementById('mobile-close-pop');
+    if (mobileCloseButton) {
+      mobileCloseButton.addEventListener('click', closePopup);
     }
   };
 }
-
-window.showPopup = (index) => {
-  const { title, image, longDescription, technologies, liveLink, sourceLink } = projects[index];
-  popupContent.innerHTML = `
-    <button id='close-pop' class='close-btn'>&times;</button>
-    <h3>${title}</h3>
-    <img src='${image}' alt='${title}' />
-    <p>${longDescription}</p>
-    <p>Technologies: ${technologies.join(', ')}</p>
-    <a class='popup-button' href='${liveLink}' target='_blank'>Live Site</a>
-    <a class='popup-button' href='${sourceLink}' target='_blank'>GitHub Repository</a>
-    <button id='mobile-close-pop' class='close-btn-mobile'>Close</button>
-  `;
-  popUp.classList.remove('hidden');
-  mainContent.classList.add('blurred');
-  body.classList.add('no-scroll');
-
-  const closePopup = () => {
-    popUp.classList.add('hidden');
-    mainContent.classList.remove('blurred');
-    body.classList.remove('no-scroll');
-  };
-
-  document.getElementById('close-pop')?.addEventListener('click', closePopup);
-  document.getElementById('mobile-close-pop')?.addEventListener('click', closePopup);
-};
 
 document.addEventListener('DOMContentLoaded', displayProjects);
 
@@ -240,11 +247,12 @@ const skills = {
   ],
 };
 
-const certification = document.getElementById('certification');
+const certification = document.getElementById('certification'); // Added definition
+
 const skill = {
-  TechnicalSkills: ['HTML', 'CSS', 'JS', 'Java', 'Git', 'Web Performance'],
-  professionalSkills: ['Problem Solving', 'Project Management', 'Communication', 'Critical Thinking', 'Time Management', 'Creativity'],
-  softSkills: ['Skills Matrix', 'Teamwork', 'Testimonials', 'Clean Code', 'Case Studies'],
+  TechnicalSkills: ["HTML", "CSS", "JS", "Java", "Git", "Web Performance"],
+  professionalSkills: ["Problem Solving", "Project Management", "Communication", "Critical Thinking", "Time Management", "Creativity"],
+  softSkills: ["Skills Matrix", "Teamwork", "Testimonials", "Clean Code", "Case Studies"],
 };
 
 const skillsContainer = document.getElementById('skills');
@@ -252,24 +260,24 @@ const skillsContainer = document.getElementById('skills');
 if (skillsContainer) {
   skillsContainer.innerHTML = `
     <h2>Skills</h2>
-    <div id='skills-content'>
-      <div class='list'>
-        <div class='skills-category'>
-          <h3 class='skills-header' data-target='#Technical-Skills-list'>Technical Skills</h3>
-          <ul class='skills-list' id='Technical-Skills-list'></ul>
+    <div id="skills-content">
+      <div class="list">
+        <div class="skills-category">
+          <h3 class="skills-header" data-target="#Technical-Skills-list">Technical Skills</h3>
+          <ul class="skills-list" id="Technical-Skills-list"></ul>
         </div>
-        <div class='skills-category'>
-          <h3 class='skills-header' data-target='#professional-skills-list'>Professional Skills</h3>
-          <ul class='skills-list' id='professional-skills-list'></ul>
+        <div class="skills-category">
+          <h3 class="skills-header" data-target="#professional-skills-list">Professional Skills</h3>
+          <ul class="skills-list" id="professional-skills-list"></ul>
         </div>
-        <div class='skills-category'>
-          <h3 class='skills-header' data-target='#soft-skills-list'>Soft Skills</h3>
-          <ul class='skills-list' id='soft-skills-list'></ul>
+        <div class="skills-category">
+          <h3 class="skills-header" data-target="#soft-skills-list">Soft Skills</h3>
+          <ul class="skills-list" id="soft-skills-list"></ul>
         </div>
       </div>
-      <div class='image'>
-        <div id='skills-image'>
-          <img src='images/images.jpg'>
+      <div class="image">
+        <div id="skills-image">
+          <img src="images/images.jpg">
         </div>
       </div>
     </div>
@@ -280,33 +288,33 @@ if (skillsContainer) {
   const professionalSkillsList = document.getElementById('professional-skills-list');
   const softSkillsList = document.getElementById('soft-skills-list');
 
-  skill.TechnicalSkills.forEach((techSkill) => {
+  skill.TechnicalSkills.forEach(techSkill => {
     const listItem = document.createElement('li');
     listItem.textContent = techSkill;
     technicalSkillsList.appendChild(listItem);
   });
 
-  skill.professionalSkills.forEach((proSkill) => {
+  skill.professionalSkills.forEach(proSkill => {
     const listItem = document.createElement('li');
     listItem.textContent = proSkill;
     professionalSkillsList.appendChild(listItem);
   });
 
-  skill.softSkills.forEach((softSkill) => {
+  skill.softSkills.forEach(softSkill => {
     const listItem = document.createElement('li');
     listItem.textContent = softSkill;
     softSkillsList.appendChild(listItem);
   });
 
   // Add click event to toggle visibility of lists
-  document.querySelectorAll('.skills-header').forEach((header) => {
+  document.querySelectorAll('.skills-header').forEach(header => {
     header.addEventListener('click', () => {
       const targetList = document.querySelector(header.dataset.target);
 
       if (targetList.classList.contains('visible')) {
         targetList.classList.remove('visible');
       } else {
-        document.querySelectorAll('.skills-list.visible').forEach((list) => {
+        document.querySelectorAll('.skills-list.visible').forEach(list => {
           list.classList.remove('visible');
         });
         targetList.classList.add('visible');
@@ -317,14 +325,14 @@ if (skillsContainer) {
 
 if (certification) {
   certification.innerHTML = `
-    <div id='certification-section'>
+    <div id="certification-section">
       <h2>Certificates</h2>
-      <div class='cert-list'>
+      <div class="cert-list">
         ${skills.certificates
-          .map((certificate) => `
-            <div class='cert'>
+          .map(certificate => `
+            <div class="cert">
               <h3>${certificate.name}</h3>
-              <img src='${certificate.image}' alt='${certificate.name}' />
+              <img src="${certificate.image}" alt="${certificate.name}" />
             </div>
           `)
           .join('')}
