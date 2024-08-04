@@ -22,7 +22,7 @@ Projects Highlight:
 Explore my work to see how I combine technical skills with creative design to build effective web solutions. Feel free to reach out if you have any questions or opportunities for collaboration.
 
 
-Dimo link 
+Dimo link: (https://walwalasafi.github.io/Portfolio/)
 
 
 
