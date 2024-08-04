@@ -248,8 +248,6 @@ const skills = {
   ],
 };
 
-const certifications = document.getElementById('certification'); // Added definition
-
 const skill = {
   TechnicalSkills: ['HTML', 'CSS', 'JS', 'Java', 'Git', 'Web Performance'],
   professionalSkills: ['Problem Solving', 'Project Management', 'Communication', 'Critical Thinking'],
@@ -326,12 +324,12 @@ document.querySelectorAll('.skills-header').forEach((header) => {
 
 const certification = document.getElementById('certification');
 
-if (certification) {
-  certification.innerHTML = `
+if (certifications) {
+  certifications.innerHTML = `
     <div id="certification-section">
       <h2>Certificates</h2>
       <div class="cert-list">
-        ${skills.certificates
+        ${skill.certificates
           .map((certificate) => `
             <div class="cert">
               <h3>${certificate.name}</h3>
