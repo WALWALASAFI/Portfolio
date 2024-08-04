@@ -241,14 +241,17 @@ function displayProjects() {
 
 document.addEventListener('DOMContentLoaded', displayProjects);
 
+const skills = {
+  certificates: [
+    { name: 'Responsive Web Design', image: 'certificate/responsive certificate.jpg', link: '#' },
+    { name: 'JavaScript', image: 'certificate/java script certificate.jpg', link: '#' },
+  ],
+};
+
 const skill = {
   TechnicalSkills: ['HTML', 'CSS', 'JS', 'Java', 'Git', 'Web Performance'],
   professionalSkills: ['Problem Solving', 'Project Management', 'Communication', 'Critical Thinking'],
   softSkills: ['Skills Matrix', 'Teamwork', 'Testimonials', 'Clean Code'],
-  certificates: [ // Moved certificates into the skill object for consistency
-    { name: 'Responsive Web Design', image: 'certificate/responsive certificate.jpg', link: '#' },
-    { name: 'JavaScript', image: 'certificate/java script certificate.jpg', link: '#' },
-  ],
 };
 
 const skillsContainer = document.getElementById('skills');
@@ -319,14 +322,14 @@ document.querySelectorAll('.skills-header').forEach((header) => {
   });
 });
 
-const certifications = document.getElementById('certification'); // Updated variable name
+const certification = document.getElementById('certification');
 
-if (certifications) {
-  certifications.innerHTML = `
+if (certification) {
+  certification.innerHTML = `
     <div id="certification-section">
       <h2>Certificates</h2>
       <div class="cert-list">
-        ${skill.certificates
+        ${skills.certificates
           .map((certificate) => `
             <div class="cert">
               <h3>${certificate.name}</h3>
