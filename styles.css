@@ -304,6 +304,7 @@ body {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Project Styles */
 .proj:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(232, 229, 229, 0.2);
@@ -316,14 +317,12 @@ body {
   box-shadow: 0 6px 16px #1e5a97;
 }
 
-/* Ensure .proj p is placed before other p selectors */
 .proj p {
   font-size: 1rem;
   margin: 10px 0;
   color: #fff;
 }
 
-/* Other .proj styles */
 .proj h3 {
   font-size: 1.4rem;
   margin: 10px 0;
@@ -349,7 +348,7 @@ body {
   background-color: #1a334b;
 }
 
-/* Place general p styles after .proj p styles */
+/* General Paragraph Styles */
 #about-me p {
   /* Your styles for #about-me p */
 }
@@ -358,16 +357,17 @@ body {
   /* Your styles for #my-edu p */
 }
 
-/* Consolidate hidden selector */
+/* Hidden Styles */
 .hidden {
   display: none;
 }
 
-/* Ensure no duplicate .hidden selectors */
+/* Blurred Styles */
 .blurred {
   filter: blur(5px);
 }
 
+/* Popup Styles */
 #popup {
   position: fixed;
   top: 50%;
@@ -665,7 +665,6 @@ body {
   margin-top: 20%;
 }
 
-/* Contact Info Section */
 .contact-info h2 {
   color: white;
   text-align: center;
@@ -736,19 +735,7 @@ body {
   background-color: #1e5a97;
 }
 
-/* Ensure .contact-info and .contact-form are placed before less specific selectors */
-.contact-info {
-  width: 43%;
-  background-color: #033e75;
-  height: 300px;
-  margin-top: 20%;
-}
-
-.contact-form {
-  width: 55%;
-  margin-top: 0%;
-}
-
+/* General Section Styles */
 #about-me h2 {
   /* Your styles for #about-me h2 */
 }
@@ -781,19 +768,20 @@ body {
   /* Your styles for #certification .cert p */
 }
 
-/* Ensure no duplicate selectors */
-#about-me p {
-  /* Your styles for #about-me p */
+/* Footer Section */
+#footer {
+  text-align: center;
+  padding: 15px 0;
+  color: #fff;
+  background: linear-gradient(to bottom, #286bae 0%, #4273a4 20%, #2b3e52 35%, black 100%);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 15px;
+  font-weight: bold;
 }
 
-#my-edu p {
-  /* Your styles for #my-edu p */
-}
-
-#certification .cert p {
-  /* Your styles for #certification .cert p */
-}
-
+/* Miscellaneous Styles */
 .hidden {
   display: none;
 }

@@ -330,13 +330,13 @@ if (certification) {
           <h2>Certificates</h2>
           <div class="cert-list">
               ${skills.certificates
-                  .map(certificate => `
-                      <div class="cert">
-                          <h3>${certificate.name}</h3>
-                          <img src="${certificate.image}" alt="${certificate.name}" />
-                      </div>
-                  `)
-                  .join('')}
+                .map(certificate => `
+                  <div class="cert">
+                      <h3>${certificate.name}</h3>
+                      <img src="${certificate.image}" alt="${certificate.name}" />
+                  </div>
+                `)
+                .join('')}
           </div>
       </div>
   `;
