@@ -304,65 +304,11 @@ body {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Project Styles */
-.proj:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(232, 229, 229, 0.2);
-}
-
-.proj img {
-  max-width: 100%;
-  border-radius: 30px;
-  height: 280px;
-  box-shadow: 0 6px 16px #1e5a97;
-}
-
-.proj p {
-  font-size: 1rem;
-  margin: 10px 0;
-  color: #fff;
-}
-
-.proj h3 {
-  font-size: 1.4rem;
-  margin: 10px 0;
-  color: #1e5a97;
-}
-
-.proj button {
-  margin-top: 20px;
-  padding: 15px 60px;
-  margin-right: 7px;
-  background-color: #1e5a97;
-  color: #000;
-  border: none;
-  font-family: 'Sansita One', sans-serif;
-  text-align: center;
-  border-radius: 30px;
-  cursor: pointer;
-  display: inline-block;
-  width: auto;
-}
-
-.proj button:hover {
-  background-color: #1a334b;
-}
-
-/* General Paragraph Styles */
-#about-me p {
-  /* Your styles for #about-me p */
-}
-
-#my-edu p {
-  /* Your styles for #my-edu p */
-}
-
-/* Hidden Styles */
+/* General Styles */
 .hidden {
   display: none;
 }
 
-/* Blurred Styles */
 .blurred {
   filter: blur(5px);
 }
@@ -427,22 +373,51 @@ body {
   position: relative;
 }
 
-#show-more-projects,
-.popup-button {
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 40px 60px;
-  background: #fff;
-  font-family: 'Sansita One', sans-serif;
-  color: #1e5a97;
-  text-decoration: none;
+/* Project Styles */
+.proj:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(232, 229, 229, 0.2);
+}
+
+.proj img {
+  max-width: 100%;
   border-radius: 30px;
+  height: 280px;
+  box-shadow: 0 6px 16px #1e5a97;
 }
 
-.popup-button:hover {
-  background: #333;
+.proj p {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #fff;
 }
 
+.proj h3 {
+  font-size: 1.4rem;
+  margin: 10px 0;
+  color: #1e5a97;
+}
+
+.proj button {
+  margin-top: 20px;
+  padding: 15px 60px;
+  margin-right: 7px;
+  background-color: #1e5a97;
+  color: #000;
+  border: none;
+  font-family: 'Sansita One', sans-serif;
+  text-align: center;
+  border-radius: 30px;
+  cursor: pointer;
+  display: inline-block;
+  width: auto;
+}
+
+.proj button:hover {
+  background-color: #1a334b;
+}
+
+/* Certification Styles */
 #certification {
   padding: 35px;
   text-align: center;
@@ -532,6 +507,7 @@ body {
   background-color: #1a334b;
 }
 
+/* Skills Styles */
 #skills {
   display: flex;
   justify-content: center;
@@ -639,6 +615,7 @@ body {
   border-radius: 10px;
 }
 
+/* Contact Styles */
 #contact {
   justify-content: center;
   align-items: center;
@@ -735,40 +712,7 @@ body {
   background-color: #1e5a97;
 }
 
-/* General Section Styles */
-#about-me h2 {
-  /* Your styles for #about-me h2 */
-}
-
-#my-edu h2 {
-  /* Your styles for #my-edu h2 */
-}
-
-#project h2 {
-  /* Your styles for #project h2 */
-}
-
-#certification h2 {
-  /* Your styles for #certification h2 */
-}
-
-#skills h2 {
-  /* Your styles for #skills h2 */
-}
-
-#about-me p {
-  /* Your styles for #about-me p */
-}
-
-#my-edu p {
-  /* Your styles for #my-edu p */
-}
-
-#certification .cert p {
-  /* Your styles for #certification .cert p */
-}
-
-/* Footer Section */
+/* Footer Styles */
 #footer {
   text-align: center;
   padding: 15px 0;
@@ -779,36 +723,4 @@ body {
   width: 100%;
   font-size: 15px;
   font-weight: bold;
-}
-
-/* Miscellaneous Styles */
-.hidden {
-  display: none;
-}
-
-.blurred {
-  filter: blur(5px);
-}
-
-#popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #1e5a97;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 10px;
-}
-
-#mobile-close-pop {
-  display: none;
-}
-
-#popup-content {
-  position: relative;
-  text-align: center;
 }
