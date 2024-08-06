@@ -18,7 +18,7 @@ body {
   height: 60px; /* Reduce the height value */
   border-radius: 45px;
   top: 0;
-  padding:0 10px;
+  padding: 0 10px;
   font-size: large;
   z-index: 10;
   flex-wrap: wrap;
@@ -328,6 +328,7 @@ body {
   color: #fff;
 }
 
+/* Other .proj styles */
 .proj h3 {
   font-size: 1.4rem;
   margin: 10px 0;
@@ -353,11 +354,21 @@ body {
   background-color: #1a334b;
 }
 
+/* Place general p styles after .proj p styles */
+#about-me p {
+  /* Your styles for #about-me p */
+}
+
+#my-edu p {
+  /* Your styles for #my-edu p */
+}
+
 /* Consolidate hidden selector */
 .hidden {
   display: none;
 }
 
+/* Ensure no duplicate .hidden selectors */
 .blurred {
   filter: blur(5px);
 }
@@ -651,11 +662,7 @@ body {
   justify-content: space-between;
 }
 
-.contact-form {
-  width: 55%;
-  margin-top: 0%;
-}
-
+/* Contact Info Section */
 .contact-info {
   width: 43%;
   background-color: #033e75;
@@ -668,11 +675,28 @@ body {
   text-align: center;
 }
 
+.contact-info p {
+  padding: 3% 18%;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.contact-info i {
+  margin-right: 1em;
+  color: #000;
+}
+
 /* Contact Form Section */
+.contact-form {
+  width: 55%;
+  margin-top: 0%;
+}
+
 .contact-form h2 {
   color: #fff;
   margin-bottom: 1em;
-  font-family: 'Sansita One', sans-serif; /* Added generic font family */
+  font-family: 'Sansita One', sans-serif;
   margin-top: 15%;
 }
 
@@ -716,36 +740,44 @@ body {
   background-color: #1e5a97;
 }
 
-/* Contact Info Section */
-.contact-info {
-  width: 43%;
-  background-color: #033e75;
-  height: 300px;
-  margin-top: 20%;
+/* Ensure .contact-info and .contact-form are placed before less specific selectors */
+#about-me h2 {
+  /* Your styles for #about-me h2 */
 }
 
-.contact-info h2 {
-  color: #fff;
-  text-align: center;
+#my-edu h2 {
+  /* Your styles for #my-edu h2 */
 }
 
-.contact-info p {
-  padding: 3% 18%;
-  display: flex;
-  align-items: center;
-  color: #fff;
+#project h2 {
+  /* Your styles for #project h2 */
 }
 
-.contact-info i {
-  margin-right: 1em;
-  color: #000;
+#certification h2 {
+  /* Your styles for #certification h2 */
 }
 
-/* Footer */
+#skills h2 {
+  /* Your styles for #skills h2 */
+}
+
+#about-me p {
+  /* Your styles for #about-me p */
+}
+
+#my-edu p {
+  /* Your styles for #my-edu p */
+}
+
+#certification .cert p {
+  /* Your styles for #certification .cert p */
+}
+
+/* Ensure no duplicate .contact-info selectors */
 #footer {
   text-align: center;
   padding: 15px 0;
-  color: #fff; /* Changed #ffffff to #fff */
+  color: #fff;
   background: linear-gradient(to bottom, #286bae 0%, #4273a4 20%, #2b3e52 35%, black 100%);
   position: relative;
   bottom: 0;
