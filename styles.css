@@ -316,11 +316,6 @@ body {
   box-shadow: 0 6px 16px #1e5a97;
 }
 
-.proj h3,
-.proj p {
-  font-family: 'Jockey One', sans-serif;
-}
-
 /* Ensure .proj p is placed before other p selectors */
 .proj p {
   font-size: 1rem;
@@ -670,6 +665,7 @@ body {
   margin-top: 20%;
 }
 
+/* Contact Info Section */
 .contact-info h2 {
   color: white;
   text-align: center;
@@ -741,6 +737,18 @@ body {
 }
 
 /* Ensure .contact-info and .contact-form are placed before less specific selectors */
+.contact-info {
+  width: 43%;
+  background-color: #033e75;
+  height: 300px;
+  margin-top: 20%;
+}
+
+.contact-form {
+  width: 55%;
+  margin-top: 0%;
+}
+
 #about-me h2 {
   /* Your styles for #about-me h2 */
 }
@@ -773,16 +781,46 @@ body {
   /* Your styles for #certification .cert p */
 }
 
-/* Ensure no duplicate .contact-info selectors */
-#footer {
-  text-align: center;
-  padding: 15px 0;
-  color: #fff;
-  background: linear-gradient(to bottom, #286bae 0%, #4273a4 20%, #2b3e52 35%, black 100%);
+/* Ensure no duplicate selectors */
+#about-me p {
+  /* Your styles for #about-me p */
+}
+
+#my-edu p {
+  /* Your styles for #my-edu p */
+}
+
+#certification .cert p {
+  /* Your styles for #certification .cert p */
+}
+
+.hidden {
+  display: none;
+}
+
+.blurred {
+  filter: blur(5px);
+}
+
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #1e5a97;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+#mobile-close-pop {
+  display: none;
+}
+
+#popup-content {
   position: relative;
-  bottom: 0;
-  width: 100%;
-  font-size: 15px;
-  font-weight: bold;
-  margin-top: 0%;
+  text-align: center;
 }
