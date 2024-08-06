@@ -180,6 +180,18 @@ body {
   margin-left: 20px;
 }
 
+.contact-info h2 {
+  color: white;
+  text-align: center;
+}
+
+.contact-form h2 {
+  color: #fff;
+  margin-bottom: 1em;
+  font-family: 'Sansita One', sans-serif;
+  margin-top: 15%;
+}
+
 #about-me h2 {
   color: #fff;
   font-family: 'Jockey One', sans-serif;
@@ -189,6 +201,25 @@ body {
   padding: 5px 40px;
   padding-left: 50px;
   margin-top: 8%;
+}
+
+.proj p {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.contact-info p {
+  padding: 3% 18%;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.contact-form p {
+  color: #fff;
+  margin-bottom: 1em;
+  padding: 2% 0;
 }
 
 #about-me p {
@@ -240,12 +271,6 @@ body {
   padding: 5px 40px;
   padding-left: 60px;
   margin-left: 25%;
-}
-
-.proj p {
-  font-size: 1rem;
-  margin: 10px 0;
-  color: #fff;
 }
 
 #my-edu p {
@@ -310,11 +335,6 @@ body {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* General Styles */
-.hidden {
-  display: none;
-}
-
 .blurred {
   filter: blur(5px);
 }
@@ -341,6 +361,13 @@ body {
 #popup-content {
   position: relative;
   text-align: center;
+}
+
+.proj img {
+  max-width: 100%;
+  border-radius: 30px;
+  height: 280px;
+  box-shadow: 0 6px 16px #1e5a97;
 }
 
 #popup-content img {
@@ -385,13 +412,6 @@ body {
   box-shadow: 0 8px 16px rgba(232, 229, 229, 0.2);
 }
 
-.proj img {
-  max-width: 100%;
-  border-radius: 30px;
-  height: 280px;
-  box-shadow: 0 6px 16px #1e5a97;
-}
-
 .proj h3 {
   font-size: 1.4rem;
   margin: 10px 0;
@@ -411,6 +431,17 @@ body {
   cursor: pointer;
   display: inline-block;
   width: auto;
+}
+
+.contact-form button {
+  background-color: #2e343b;
+  color: #fffbfb;
+  border: none;
+  padding: 0.7em 2.2em;
+  margin-left: 38%;
+  border-radius: 30px;
+  font-weight: bolder;
+  cursor: pointer;
 }
 
 .proj button:hover {
@@ -642,18 +673,6 @@ body {
   margin-top: 20%;
 }
 
-.contact-info h2 {
-  color: white;
-  text-align: center;
-}
-
-.contact-info p {
-  padding: 3% 18%;
-  display: flex;
-  align-items: center;
-  color: #fff;
-}
-
 .contact-info i {
   margin-right: 1em;
   color: #000;
@@ -663,19 +682,6 @@ body {
 .contact-form {
   width: 55%;
   margin-top: 0%;
-}
-
-.contact-form h2 {
-  color: #fff;
-  margin-bottom: 1em;
-  font-family: 'Sansita One', sans-serif;
-  margin-top: 15%;
-}
-
-.contact-form p {
-  color: #fff;
-  margin-bottom: 1em;
-  padding: 2% 0;
 }
 
 .contact-form input,
@@ -695,17 +701,6 @@ body {
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
   color: #fcf4f4;
-}
-
-.contact-form button {
-  background-color: #2e343b;
-  color: #fffbfb;
-  border: none;
-  padding: 0.7em 2.2em;
-  margin-left: 38%;
-  border-radius: 30px;
-  font-weight: bolder;
-  cursor: pointer;
 }
 
 .contact-form button:hover {
