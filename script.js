@@ -24,6 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
     <a href="#contact" class="contact-btn">Contact Me</a>
   `;
 
+  oneImage.innerHTML = `
+  <img src="images/download.jpg">
+  `;
+
   const socialLinks = document.createElement('div');
   socialLinks.className = 'social-links';
   socialLinks.innerHTML = `

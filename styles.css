@@ -148,6 +148,19 @@ body {
   position: relative;
 }
 
+.one-image {
+  top: 2rem;
+  max-width: 50%;
+  text-align: center;
+}
+
+.one-image img {
+  max-width: 70%;
+  border-radius: 50px;
+  margin-left: 60%;
+  margin-top: 25%;
+}
+
 .social-links {
   display: flex;
   flex-direction: column;
