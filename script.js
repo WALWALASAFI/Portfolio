@@ -15,6 +15,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const heroText = document.querySelector('.hero-text');
   const heroContent = document.querySelector('.hero-content');
+  const  heroImage = document.querySelector('.hero-image');
 
   heroText.innerHTML = `
     <div class="circle"></div>
@@ -24,9 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
     <a href="#contact" class="contact-btn">Contact Me</a>
   `;
 
-  oneImage.innerHTML = `
-  <img src="images/download.jpg">
-  `;
+  heroImage.innerHTML = `
+      <img src="images/download.jpg">
+    `;
 
   const socialLinks = document.createElement('div');
   socialLinks.className = 'social-links';
@@ -45,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     aboutMe.innerHTML = `
       <div class="about-section">
         <div class="about-image">
-          <img src="images/page.jpg" alt="About Image">
+          <img src="images/girls.jpg">
         </div>
         <div class="about-text">
           <h2>About me</h2>

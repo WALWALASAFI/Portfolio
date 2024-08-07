@@ -148,16 +148,16 @@ body {
   position: relative;
 }
 
-.one-image {
+.hero-image {
   top: 2rem;
-  max-width: 50%;
+  max-width: 200%;
   text-align: center;
 }
 
-.one-image img {
-  max-width: 70%;
+.hero-image img {
+  width: 180%;
   border-radius: 50px;
-  margin-left: 60%;
+  margin-left: 110%;
   margin-top: 25%;
 }
 
@@ -182,9 +182,9 @@ body {
 }
 
 .about-image img {
-  width: 30%;
+  width: 35%;
   float: right;
-  margin-top: 60px;
+  margin-top: 80px;
   border-radius: 10%;
 }
 
@@ -240,6 +240,8 @@ body {
   margin-top: 40px;
   margin-left: 30px;
   text-align: left;
+  text-align: center;
+  margin-right: 35%;
 }
 
 #education {
