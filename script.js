@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   `;
 
   heroImage.innerHTML = `
-      <img src="images/download.jpg">
+      <img src="images/caucasian-female-software-developer-her-40s-debugging-program_1238364-92061.jpg">
     `;
 
   const socialLinks = document.createElement('div');
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     aboutMe.innerHTML = `
       <div class="about-section">
         <div class="about-image">
-          <img src="images/girls.jpg">
+          <img src="images/woman-is-sitting-desk-with-computer-monitor_864013-4058.jpg">
         </div>
         <div class="about-text">
           <h2>About me</h2>
