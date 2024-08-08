@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroText = document.querySelector('.hero-text');
   const heroContent = document.querySelector('.hero-content');
   const  heroImage = document.querySelector('.hero-image');
-
+  
   heroText.innerHTML = `
     <div class="circle"></div>
     <h3>Hello, My Name is</h3>
