@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <h1>Web Developer</h1>
     <a href="#contact" class="contact-btn">Contact Me</a>
   `;
-
+  
   heroImage.innerHTML = `
     <img src="images/caucasian-female-software-developer-her-40s-debugging-program_1238364-92061.jpg">
   `;
