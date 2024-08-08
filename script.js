@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
   `;
 
   heroImage.innerHTML = `
-      <img src="images/caucasian-female-software-developer-her-40s-debugging-program_1238364-92061.jpg">
-    `;
+    <img src="images/caucasian-female-software-developer-her-40s-debugging-program_1238364-92061.jpg">
+  `;
 
   const socialLinks = document.createElement('div');
   socialLinks.className = 'social-links';

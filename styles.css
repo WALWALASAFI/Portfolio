@@ -117,24 +117,24 @@ body {
 .hero-text h2,
 .hero-text h3 {
   margin: 10px;
-  line-height: 1.0;
+  line-height: 1.1;
   text-align: left;
 }
 
 .hero-text h3 {
-  font-family: 'Times New Roman', Times, serif ;
+  font-family: 'Times New Roman', Times, serif;
   color: #fff;
   margin-top: 30%;
 }
 
 .hero-text h2 {
   font-size: 2.1rem;
-  font-family:'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   color: #3061b7;
 }
 
 .hero-text h1 {
-  font-family:'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 3.8rem;
   color: #fff;
 }
@@ -843,7 +843,7 @@ body {
   .hero-text h1,
   .hero-text h2,
   .hero-text h3 {
-    line-height: 1.0;
+    line-height: 1.1;
     text-align: start;
   }
 
@@ -892,7 +892,7 @@ body {
     position: absolute;
     top: 190%;
     margin-left: 22%;
-    background-color: #ffffff;
+    background-color: #fff;
   }
 
   #about-me {
@@ -1039,7 +1039,7 @@ body {
 @media (max-width: 500px) {
   .sidebar {
     width: 80%;
-    background: linear-gradient(to bottom,#2645a9 0%, #2e4684 20%, #1e2e3f 35%, black 100%);
+    background: linear-gradient(to bottom, #2645a9 0%, #2e4684 20%, #1e2e3f 35%, black 100%);
   }
 
   .contact-btn-mobile {
@@ -1070,7 +1070,7 @@ body {
   .circle {
     top: 125%;
     left: 1%;
-    background: linear-gradient(to bottom,#2645a9 0%, #2e4684 20%, #1e2e3f 35%, black 100%);
+    background: linear-gradient(to bottom, #2645a9 0%, #2e4684 20%, #1e2e3f 35%, black 100%);
   }
 
   .hero-text {
@@ -1228,7 +1228,7 @@ body {
     display: block;
     text-align: center;
     padding: 15px 0;
-    background: linear-gradient(to bottom,#2645a9 0%, #2e4684 20%, #1e2e3f 35%, black 100%);
+    background: linear-gradient(to bottom, #2645a9 0%, #2e4684 20%, #1e2e3f 35%, black 100%);
     position: relative;
     font-family:
       'jockey one',
