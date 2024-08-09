@@ -2,7 +2,7 @@ Walwala Safi's Portfolio
 
 
 Demo 📸
-![image](images/readme.jpg)
+![alt text](images/pi.jpg)
 
 
 

@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroText = document.querySelector('.hero-text');
   const heroContent = document.querySelector('.hero-content');
   const  heroImage = document.querySelector('.hero-image');
-  
+
   heroText.innerHTML = `
     <div class="circle"></div>
     <h3>Hello, My Name is</h3>
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <h1>Web Developer</h1>
     <a href="#contact" class="contact-btn">Contact Me</a>
   `;
-  
+
   heroImage.innerHTML = `
     <img src="images/caucasian-female-software-developer-her-40s-debugging-program_1238364-92061.jpg">
   `;
