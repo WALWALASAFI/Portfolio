@@ -676,7 +676,45 @@ body {
 #popup-content {
   position: relative;
   text-align: center;
+  max-height: 90vh;
+  overflow-y: auto;
 }
+
+#live {
+  padding: 15px 60px;
+  margin-right: 10%;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 30px;
+  text-align: left;
+  cursor: pointer;
+  display: inline-block;
+  width: auto;
+}
+
+#git {
+  margin-left: 10%;
+  padding: 15px 60px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 30px;
+  text-align: left;
+  cursor: pointer;
+  display: inline-block;
+  width: auto;
+}
+
+ #git:hover {
+  background-color: #3a4054;
+ }
+
+ #live:hover {
+  background-color: #3a4054;
+ }
 
 .proj img {
   max-width: 100%;
