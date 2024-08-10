@@ -683,8 +683,8 @@ body {
 #live {
   padding: 15px 60px;
   margin-right: 10%;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #000;
+  color: #fff;
   border: none;
   font-family: 'Times New Roman', Times, serif;
   border-radius: 30px;
@@ -697,8 +697,8 @@ body {
 #git {
   margin-left: 10%;
   padding: 15px 60px;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #000;
+  color: #fff;
   border: none;
   font-family: 'Times New Roman', Times, serif;
   border-radius: 30px;
@@ -708,13 +708,13 @@ body {
   width: auto;
 }
 
- #git:hover {
+#git:hover {
   background-color: #3a4054;
- }
+}
 
- #live:hover {
+#live:hover {
   background-color: #3a4054;
- }
+}
 
 .proj img {
   max-width: 100%;
@@ -742,7 +742,7 @@ body {
 }
 
 .close-btn-mobile {
-  display: hidden; /* Show only for mobile or as needed */
+  display: none; /* Show only for mobile or as needed */
 }
 
 #main-content.blurred {
@@ -776,7 +776,7 @@ body {
   padding: 15px 60px;
   margin-right: 7px;
   background-color: #2645a9;
-  color: #ffffff;
+  color: #fff;
   border: none;
   font-family: 'Sansita One', sans-serif;
   text-align: center;
@@ -1372,4 +1372,3 @@ body {
     margin-left: 25%;
   }
 }
-
