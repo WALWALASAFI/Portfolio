@@ -742,7 +742,7 @@ body {
 }
 
 .close-btn-mobile {
-  display: none; /* Show only for mobile or as needed */
+  display: hidden; /* Show only for mobile or as needed */
 }
 
 #main-content.blurred {
