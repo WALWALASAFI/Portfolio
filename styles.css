@@ -125,6 +125,7 @@ body {
   font-family: 'Times New Roman', Times, serif;
   color: #fff;
   margin-top: 10%;
+  margin-left: 12%;
 }
 
 .hero-text h2 {
@@ -162,8 +163,8 @@ body {
 }
 
 .hero-image img {
-  width: 60%;
-  height: 90%;
+  width: 70%;
+  height: 200%;
   border-radius: 40px;
   margin-left: 30%;
   margin-top: 30%;
@@ -174,7 +175,7 @@ body {
   flex-direction: column;
   position: absolute;
   left: -9rem;
-  top: 60%;
+  top: 40%;
   transform: translateY(-50%);
   width: 30px;
   height: 30px;
@@ -190,15 +191,15 @@ body {
 }
 
 .about-image img {
-  width: 25%;
-  float: right;
+  width: 28%;
+  float: left;
   margin-top: 90px;
   border-radius: 10%;
 }
 
 #about-me {
   max-width: 80%;
-  margin-left: 5px;
+  margin-left: 10%;
 }
 
 .contact-info h2 {
@@ -220,7 +221,7 @@ body {
   clip-path: polygon(0% 0, 80% 0, 100% 100%, 20% 100%);
   display: inline-block;
   padding: 5px 30px;
-  margin-right: 25%;
+  margin-left: 25%;
   margin-top: 8%;
 }
 
@@ -246,10 +247,10 @@ body {
 #about-me p {
   color: #ccc;
   margin-top: 40px;
-  margin-left: 30px;
+  margin-left: 55%;
   text-align: left;
   text-align: center;
-  margin-right: 55%;
+  margin-right: 30px;
 }
 
 #education {
@@ -345,6 +346,12 @@ body {
   justify-items: center;
 }
 
+#show-more-projects {
+  background-color: #000;
+  color: white;
+  border: none;
+}
+
 .proj {
   background: transparent;
   border-radius: 8px;
@@ -379,7 +386,7 @@ body {
 }
 
 #mobile-close-pop {
-  display: none;
+  display: none; /* Show only for mobile or as needed */
 }
 
 #popup-content {
@@ -418,11 +425,11 @@ body {
 }
 
 #git:hover {
-  background-color: #3a4054;
+  background-color: #2b2d33;
 }
 
 #live:hover {
-  background-color: #3a4054;
+  background-color: #2b2d33;
 }
 
 .proj img {
@@ -740,7 +747,6 @@ body {
   color: #000;
 }
 
-/* Contact Form Section */
 .contact-form {
   width: 55%;
   margin-top: 0%;
@@ -1165,25 +1171,25 @@ body {
   }
 
   .hero-image {
-    width: 100%;
+    width: 150%;
     margin-left: -100%;
     margin-top: -90%;
-    height: 60vh;
+    height: 150vh;
   }
 
   .circle {
     top: 125%;
     left: 1%;
-    background: linear-gradient(to bottom, #2645a9 0%, #2e4684 20%, #1e2e3f 35%, black 100%);
+    background: linear-gradient(to bottom, #2b4dbb 0%, #17298f 20%, #0b1367 35%, black 100%);
   }
 
   .hero-text {
-    max-width: 100%;
+    max-width: 150%;
     width: 100%;
   }
 
   .hero-text h3 {
-    margin-top: 35%;
+    margin-top: 10%;
     margin-left: 15%;
   }
 
@@ -1205,6 +1211,8 @@ body {
   #about-me {
     max-width: 140%;
     margin-top: 30%;
+    margin-left: 20%;
+    text-align: center;
   }
 
   #project {
@@ -1271,10 +1279,12 @@ body {
   }
 
   .contact-info {
-    width: 85%;
+    width: 75%;
     background-color: #2645a9;
-    height: 420px;
+    height: 280px;
     order: 1;
+    margin-right: 5%;
+    margin-left: 0%;
   }
 
   .contact-form input,

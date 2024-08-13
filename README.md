@@ -22,7 +22,7 @@ Projects Highlight:
 Explore my work to see how I combine technical skills with creative design to build effective web solutions. Feel free to reach out if you have any questions or opportunities for collaboration.
 
 
-Dimo link: (https://walwalasafi.github.io/Portfolio/)
+the live Dimo of Project: [click here](https://walwalasafi.github.io/Portfolio/)
 
 
 
@@ -48,6 +48,8 @@ Contribution
 
 ◻ Safia Iqbal.
 
+
+Figma Design: you can check figma design [click here](https://www.figma.com/design/n2sJXMUcTX7VmMfxjVnrxQ/Untitled?node-id=0-1&t=yYaXrHKepHBA5ZH9-0)
 
 
 Contributing
