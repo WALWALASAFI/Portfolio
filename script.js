@@ -248,8 +248,8 @@ document.addEventListener('DOMContentLoaded', displayProjects);
 
 const skills = {
   certificates: [
-    { name: 'Responsive Web Design', image: 'certificate/responsive certificate.jpg', link: '#' },
-    { name: 'JavaScript', image: 'certificate/java script certificate.jpg', link: '#' },
+    { name: 'Responsive Web Design', image: 'certificate/responsive certificate.jpg', link: 'https://www.freecodecamp.org/learn/2022/responsive-web-design/' },
+    { name: 'JavaScript', image: 'certificate/java script certificate.jpg', link: 'https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/' },
   ],
 };
 
