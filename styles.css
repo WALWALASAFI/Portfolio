@@ -41,9 +41,29 @@ body {
   font-size: large;
 }
 
+#certification .cert a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 60px;
+  margin-right: 7px;
+  background-color: #2645a9;
+  color: #000;
+  border: none;
+  font-family: 'Sansita One', sans-serif;
+  text-align: center;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  width: auto;
+}
+
+#certification .cert a:hover {
+  background-color: #1a334b;
+}
+
 #nav .sidebar a:hover,
 #nav #navbar a:hover {
-  color: #000000;
+  color: #000;
 }
 
 .menu-button {
@@ -593,26 +613,6 @@ body {
   color: #fff;
 }
 
-#certification .cert a {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 15px 60px;
-  margin-right: 7px;
-  background-color: #2645a9;
-  color: #000;
-  border: none;
-  font-family: 'Sansita One', sans-serif;
-  text-align: center;
-  border-radius: 30px;
-  cursor: pointer;
-  text-decoration: none;
-  width: auto;
-}
-
-#certification .cert a:hover {
-  background-color: #1a334b;
-}
-
 /* Skills Styles */
 #skills {
   display: flex;
@@ -1136,7 +1136,7 @@ body {
     padding-bottom: 30px;
     margin: 10px 20px;
     margin-bottom: 60px;
-}
+  }
 
   .pop-project-images img {
     display: none;
@@ -1265,7 +1265,7 @@ body {
     margin-bottom: 60px;
     float: left;
   }
-  
+
   #git {
     display: inline;
     background: none;

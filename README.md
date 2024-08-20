@@ -1,7 +1,7 @@
-### Walwala Safi's Portfolio
+##### Walwala Safi's Portfolio
 
 
-## Demo 📸
+### Demo 📸
 ![Demo link](images/pi.jpg)
 
 
@@ -26,7 +26,7 @@ the live Dimo of Project: [click here](https://walwalasafi.github.io/Portfolio/)
 
 
 
-## Technologies Used 🛠️
+### Technologies Used 🛠️
 
 
 🔹HTML
@@ -36,7 +36,7 @@ the live Dimo of Project: [click here](https://walwalasafi.github.io/Portfolio/)
 🔹java script
 
 
-## Contribution
+### Contribution
 
 
 
@@ -49,13 +49,13 @@ the live Dimo of Project: [click here](https://walwalasafi.github.io/Portfolio/)
 ◻ Safia Iqbal.
 
 
-## Figma Design:
+### Figma Design:
 
 
  you can check figma design [click here](https://www.figma.com/design/n2sJXMUcTX7VmMfxjVnrxQ/Untitled?node-id=0-1&t=yYaXrHKepHBA5ZH9-0)
 
 
-## Contributing
+### Contributing
 
 
 We welcome contributions to improve the Roman Number Converter. If you have ideas for enhancements, notice any issues, or want to work on this project, please follow these steps:
@@ -80,24 +80,24 @@ Create a pull request
 
 
       
-   1️⃣###  `creat a new repository in your github`
+   1️⃣  `creat a new repository in your github`
 
 
-2️⃣###   `Create a New Project Directory`
+2️⃣  `Create a New Project Directory`
 
 Open your terminal or command prompt. Navigate to the directory where you want to create your project. Run the following command to create a new directory for your project: bash Copy code mkdir documentation-project
 
-3️⃣###  `open HTML in any program such you want ssuch us: vscode, terminal and cmd`
+3️⃣  `open HTML in any program such you want ssuch us: vscode, terminal and cmd`
 
-4️⃣###  `creat a  HTML file`
+4️⃣ `creat a  HTML file`
 
-4️⃣###  `creat a  javascript file`
+4️⃣ `creat a  javascript file`
 
-5️⃣###  `give a style to project by creating style.css file` 
+5️⃣ `give a style to project by creating style.css file` 
 
-6️⃣###  `use (git add, git commint, git push) in the git bash to push it in Github`
+6️⃣ `use (git add, git commint, git push) in the git bash to push it in Github`
 
-7️⃣###  `Make a string and uniqe project-Readme.md file`
+7️⃣  `Make a string and uniqe project-Readme.md file`
 
 
 ### Author 🔵✅
